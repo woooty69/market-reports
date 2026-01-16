@@ -2,43 +2,239 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Market Report 2026-01-16 13:19</title>
+<title>Market Report 2026년 01월 16일 13:30</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,sans-serif;background:#0d1117;color:#e6edf3;font-size:13px;line-height:1.5;padding:14px;max-width:100%}
-.hd{text-align:center;padding:16px 0;border-bottom:1px solid #30363d;margin-bottom:16px}
-.hd h1{font-size:1.4em;background:linear-gradient(90deg,#58a6ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.ts{color:#8b949e;font-size:0.85em}
-.sec{background:#161b22;border-radius:10px;padding:14px;margin-bottom:14px;border:1px solid #30363d}
-.st{font-size:1em;font-weight:600;margin-bottom:10px;padding-left:10px;border-left:3px solid #58a6ff}
-.st.pos{border-left-color:#4ade80}.st.neg{border-left-color:#f87171}
-.idx-wrap{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
-.idx{flex:0 0 auto;min-width:90px;background:#21262d;border-radius:8px;padding:10px;text-align:center}
-.idx-n{font-size:0.8em;color:#8b949e}.idx-p{font-size:1em;font-weight:600}
-table{width:100%;border-collapse:collapse;font-size:0.85em}
-th{background:#21262d;padding:8px 6px;text-align:left;color:#8b949e;border-bottom:1px solid #30363d}
-td{padding:8px 6px;border-bottom:1px solid #21262d}
-.rs{color:#8b949e;font-size:0.8em}
-.t3{background:#21262d;border-radius:8px;padding:12px;margin-bottom:8px}
-.t3h{display:flex;align-items:center;gap:10px}
-.t3r{background:linear-gradient(135deg,#f59e0b,#f97316);color:#000;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
-.t3n{font-weight:600}.t3t{color:#8b949e;font-size:0.8em}
-.t3i{margin-top:8px}.il{color:#8b949e}.iv{font-weight:600}
-.ft{text-align:center;padding:16px;color:#8b949e;font-size:0.8em;border-top:1px solid #30363d;margin-top:16px}
+body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:#0d1117;color:#e6edf3;font-size:11px;line-height:1.4;padding:10px;max-width:100%}
+.hd{text-align:center;padding:12px 0;border-bottom:1px solid #30363d;margin-bottom:12px}
+.hd h1{font-size:1.3em;background:linear-gradient(90deg,#58a6ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.ts{color:#8b949e;font-size:0.8em;margin-top:4px}
+.sec{background:#161b22;border-radius:8px;padding:12px;margin-bottom:10px;border:1px solid #30363d}
+.st{font-size:0.95em;font-weight:600;margin-bottom:8px;padding-left:8px;border-left:3px solid #58a6ff;display:flex;align-items:center;gap:6px}
+.st.pos{border-left-color:#4ade80}.st.neg{border-left-color:#f87171}.st.kr{border-left-color:#fbbf24}.st.pick{border-left-color:#a371f7}
+.idx-wrap{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;flex-wrap:wrap}
+.idx{flex:0 0 auto;min-width:70px;background:#21262d;border-radius:6px;padding:8px 6px;text-align:center}
+.idx.ind{background:#1c2128;border:1px solid #30363d}
+.idx-n{font-size:0.7em;color:#8b949e}.idx-p{font-size:0.9em;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:0.8em}
+th{background:#21262d;padding:6px 4px;text-align:left;color:#8b949e;border-bottom:1px solid #30363d;font-size:0.75em}
+td{padding:6px 4px;border-bottom:1px solid #21262d}
+.tk{background:#30363d;padding:2px 4px;border-radius:3px;font-size:0.75em;font-family:monospace}
+.rs{color:#8b949e;font-size:0.75em}
+.kr-stocks{color:#fbbf24;font-size:0.75em}
+.sub-title{font-size:0.85em;font-weight:600;margin:10px 0 6px;padding:4px 8px;border-radius:4px}
+.sub-title.gain{background:rgba(74,222,128,0.1);color:#4ade80}
+.sub-title.lose{background:rgba(248,113,113,0.1);color:#f87171}
+.pick{background:#21262d;border-radius:8px;padding:10px;margin-bottom:8px;border-left:3px solid #a371f7}
+.pick-header{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.medal{font-size:1.2em}
+.pick-name{font-weight:600;font-size:0.95em}
+.pick-code{color:#8b949e;font-size:0.75em}
+.pick-info{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.pick-row{display:flex;gap:4px}
+.label{color:#8b949e;font-size:0.75em}
+.value{font-size:0.8em;color:#e6edf3}
+.pick-rationale{background:#161b22;padding:6px 8px;border-radius:4px;font-size:0.75em;color:#a5d6ff}
+.ft{text-align:center;padding:12px;color:#8b949e;font-size:0.7em;border-top:1px solid #30363d;margin-top:12px}
 </style>
 </head>
 <body>
-<div class="hd"><h1>US/KR Market Analysis</h1><div class="ts">2026-01-16 13:19 KST</div></div>
-<div class="sec"><div class="st">US Major Indices</div><div class="idx-wrap"><div class="idx"><div class="idx-n">S&P 500</div><div class="idx-p">692.24</div><div style="color:#4ade80">▲0.27%</div></div><div class="idx"><div class="idx-n">NASDAQ</div><div class="idx-p">621.78</div><div style="color:#4ade80">▲0.36%</div></div><div class="idx"><div class="idx-n">Dow Jones</div><div class="idx-p">494.48</div><div style="color:#4ade80">▲0.59%</div></div></div></div>
-<div class="sec"><div class="st pos">Top Sectors</div><table><tr><th>Ticker</th><th>Sector</th><th>Change</th><th>Reason</th></tr><tr><td>XLU</td><td>Utilities</td><td style="color:#4ade80;text-align:center">▲1.02%</td><td class="rs">Buy</td></tr><tr><td>XLI</td><td>Industrials</td><td style="color:#4ade80;text-align:center">▲0.92%</td><td class="rs">Buy</td></tr><tr><td>XLRE</td><td>Real Estate</td><td style="color:#4ade80;text-align:center">▲0.75%</td><td class="rs">Buy</td></tr><tr><td>XLK</td><td>Technology</td><td style="color:#4ade80;text-align:center">▲0.53%</td><td class="rs">Buy</td></tr><tr><td>XLB</td><td>Materials</td><td style="color:#4ade80;text-align:center">▲0.43%</td><td class="rs">Buy</td></tr></table></div>
-<div class="sec"><div class="st neg">Bottom Sectors</div><table><tr><th>Ticker</th><th>Sector</th><th>Change</th><th>Reason</th></tr><tr><td>XLE</td><td>Energy</td><td style="color:#f87171;text-align:center">▼0.94%</td><td class="rs">Sell</td></tr><tr><td>XLV</td><td>Healthcare</td><td style="color:#f87171;text-align:center">▼0.57%</td><td class="rs">Sell</td></tr><tr><td>XLC</td><td>Communication</td><td style="color:#f87171;text-align:center">▼0.37%</td><td class="rs">Sell</td></tr><tr><td>XLP</td><td>Consumer Staples</td><td style="color:#4ade80;text-align:center">▲0.17%</td><td class="rs">Buy</td></tr><tr><td>XLY</td><td>Consumer Disc</td><td style="color:#4ade80;text-align:center">▲0.37%</td><td class="rs">Buy</td></tr></table></div>
-<div class="sec"><div class="st pos">Top Stocks</div><table><tr><th>Ticker</th><th>Stock</th><th>Change</th><th>Reason</th></tr><tr><td>TSM</td><td>TSMC</td><td style="color:#4ade80;text-align:center">▲4.44%</td><td class="rs">Earnings</td></tr><tr><td>NVDA</td><td>Nvidia</td><td style="color:#4ade80;text-align:center">▲2.13%</td><td class="rs">Buy</td></tr><tr><td>AMD</td><td>AMD</td><td style="color:#4ade80;text-align:center">▲1.93%</td><td class="rs">Buy</td></tr><tr><td>AVGO</td><td>Broadcom</td><td style="color:#4ade80;text-align:center">▲0.92%</td><td class="rs">Buy</td></tr><tr><td>META</td><td>Meta</td><td style="color:#4ade80;text-align:center">▲0.86%</td><td class="rs">Buy</td></tr></table></div>
-<div class="sec"><div class="st neg">Bottom Stocks</div><table><tr><th>Ticker</th><th>Stock</th><th>Change</th><th>Reason</th></tr><tr><td>GOOGL</td><td>Google</td><td style="color:#f87171;text-align:center">▼0.91%</td><td class="rs">Sell</td></tr><tr><td>AAPL</td><td>Apple</td><td style="color:#f87171;text-align:center">▼0.67%</td><td class="rs">Sell</td></tr><tr><td>MSFT</td><td>Microsoft</td><td style="color:#f87171;text-align:center">▼0.59%</td><td class="rs">Sell</td></tr><tr><td>TSLA</td><td>Tesla</td><td style="color:#f87171;text-align:center">▼0.14%</td><td class="rs">Sell</td></tr><tr><td>AMZN</td><td>Amazon</td><td style="color:#4ade80;text-align:center">▲0.65%</td><td class="rs">Buy</td></tr></table></div>
-<div class="sec"><div class="st">KR Market Impact</div><h4 style="color:#4ade80;margin:12px 0 8px">Positive Impact</h4><table><tr><th>US Sector</th><th>KR Stocks</th><th>Change</th></tr><tr><td>Industrials</td><td>Hyundai Heavy, Doosan, Hanwha</td><td style="color:#4ade80">+0.92%</td></tr></table><h4 style="color:#f87171;margin:16px 0 8px">Negative Impact</h4><table><tr><th>US Sector</th><th>KR Stocks</th><th>Change</th></tr><tr><td>Energy</td><td>S-Oil, SK Innovation, GS</td><td style="color:#f87171">-0.94%</td></tr><tr><td>Healthcare</td><td>Samsung Bio, Celltrion, Yuhan</td><td style="color:#f87171">-0.57%</td></tr><tr><td>Communication</td><td>NAVER, Kakao, SK Telecom</td><td style="color:#f87171">-0.37%</td></tr></table></div>
-<div class="sec"><div class="st">Top 3 Picks</div><div class="t3"><div class="t3h"><div class="t3r">1</div><div><div class="t3n">TSMC</div><div class="t3t">TSM</div></div></div>
-        <div class="t3i"><span class="il">Change</span> <span class="iv" style="color:#4ade80">▲4.44%</span></div></div><div class="t3"><div class="t3h"><div class="t3r">2</div><div><div class="t3n">Nvidia</div><div class="t3t">NVDA</div></div></div>
-        <div class="t3i"><span class="il">Change</span> <span class="iv" style="color:#4ade80">▲2.13%</span></div></div><div class="t3"><div class="t3h"><div class="t3r">3</div><div><div class="t3n">AMD</div><div class="t3t">AMD</div></div></div>
-        <div class="t3i"><span class="il">Change</span> <span class="iv" style="color:#4ade80">▲1.93%</span></div></div></div>
-<div class="ft">Auto-generated Report | Data from CNBC/Yahoo<br>2026 Market Bot</div>
+<div class="hd">
+    <h1>🇺🇸 미국 증시 분석 및 🇰🇷 한국 증시 영향 리포트</h1>
+    <div class="ts">2026년 01월 16일 13:30 마감 기준</div>
+</div>
+
+<div class="sec">
+    <div class="st">1. 미국 증시 마감 현황</div>
+    <div class="idx-wrap"><div class="idx"><div class="idx-n">S&P500</div><div class="idx-p">692.24</div><div style="color:#4ade80">▲0.27%</div></div><div class="idx"><div class="idx-n">NASDAQ</div><div class="idx-p">621.78</div><div style="color:#4ade80">▲0.36%</div></div><div class="idx"><div class="idx-n">Dow</div><div class="idx-p">494.48</div><div style="color:#4ade80">▲0.59%</div></div><div class="idx ind"><div class="idx-n">VIX</div><div class="idx-p">15.84</div><div style="color:#4ade80">▲0.00%</div></div><div class="idx ind"><div class="idx-n">WTI</div><div class="idx-p">58.96</div><div style="color:#4ade80">▲0.00%</div></div><div class="idx ind"><div class="idx-n">Gold</div><div class="idx-p">4,604.10</div><div style="color:#4ade80">▲0.00%</div></div><div class="idx ind"><div class="idx-n">USD Index</div><div class="idx-p">99.29</div><div style="color:#4ade80">▲0.00%</div></div></div>
+</div>
+
+<div class="sec">
+    <div class="st pos">📈 상승 섹터 및 종목</div>
+    <table>
+        <tr><th>Ticker</th><th>섹터</th><th>등락률</th><th>상승 요인</th></tr>
+        <tr>
+                <td><span class="tk">XLU</span></td>
+                <td>Utilities</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲1.02%</td>
+                <td class="rs">투자심리 개선</td>
+            </tr><tr>
+                <td><span class="tk">XLI</span></td>
+                <td>Industrials</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.92%</td>
+                <td class="rs">소폭 상승</td>
+            </tr><tr>
+                <td><span class="tk">XLRE</span></td>
+                <td>Real Estate</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.75%</td>
+                <td class="rs">소폭 상승</td>
+            </tr><tr>
+                <td><span class="tk">XLK</span></td>
+                <td>Technology</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.53%</td>
+                <td class="rs">소폭 상승</td>
+            </tr><tr>
+                <td><span class="tk">XLB</span></td>
+                <td>Materials</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.43%</td>
+                <td class="rs">소폭 상승</td>
+            </tr>
+    </table>
+    <div style="height:8px"></div>
+    <table>
+        <tr><th>Ticker</th><th>종목</th><th>등락률</th><th>연관 한국주</th><th>요인</th></tr>
+        <tr>
+                <td><span class="tk">TSM</span></td>
+                <td>TSMC</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲4.44%</td>
+                <td class="rs">삼성전자, DB하이텍</td>
+                <td class="rs">실적 발표</td>
+            </tr><tr>
+                <td><span class="tk">NVDA</span></td>
+                <td>Nvidia</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲2.13%</td>
+                <td class="rs">SK하이닉스, 삼성전자</td>
+                <td class="rs">시장 호재</td>
+            </tr><tr>
+                <td><span class="tk">AMD</span></td>
+                <td>AMD</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲1.93%</td>
+                <td class="rs">SK하이닉스, 한미반도체</td>
+                <td class="rs">투자심리 개선</td>
+            </tr><tr>
+                <td><span class="tk">AVGO</span></td>
+                <td>Broadcom</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.92%</td>
+                <td class="rs">삼성전기, LG이노텍</td>
+                <td class="rs">소폭 상승</td>
+            </tr><tr>
+                <td><span class="tk">META</span></td>
+                <td>Meta</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.86%</td>
+                <td class="rs">카카오, NAVER</td>
+                <td class="rs">소폭 상승</td>
+            </tr>
+    </table>
+</div>
+
+<div class="sec">
+    <div class="st neg">📉 하락 섹터 및 종목</div>
+    <table>
+        <tr><th>Ticker</th><th>섹터</th><th>등락률</th><th>하락 요인</th></tr>
+        <tr>
+                <td><span class="tk">XLE</span></td>
+                <td>Energy</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.94%</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">XLV</span></td>
+                <td>Healthcare</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.57%</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">XLC</span></td>
+                <td>Communication</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.37%</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">XLP</span></td>
+                <td>Consumer Staples</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.17%</td>
+                <td class="rs">소폭 상승</td>
+            </tr><tr>
+                <td><span class="tk">XLY</span></td>
+                <td>Consumer Disc</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.37%</td>
+                <td class="rs">소폭 상승</td>
+            </tr>
+    </table>
+    <div style="height:8px"></div>
+    <table>
+        <tr><th>Ticker</th><th>종목</th><th>등락률</th><th>연관 한국주</th><th>요인</th></tr>
+        <tr>
+                <td><span class="tk">GOOGL</span></td>
+                <td>Google</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.91%</td>
+                <td class="rs">NAVER, 카카오</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">AAPL</span></td>
+                <td>Apple</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.67%</td>
+                <td class="rs">LG이노텍, 삼성SDI</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">MSFT</span></td>
+                <td>Microsoft</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.59%</td>
+                <td class="rs">삼성SDS, 더존비즈온</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">TSLA</span></td>
+                <td>Tesla</td>
+                <td style="color:#f87171;text-align:center;font-weight:600">▼0.14%</td>
+                <td class="rs">LG에너지솔루션, 삼성SDI</td>
+                <td class="rs">소폭 조정</td>
+            </tr><tr>
+                <td><span class="tk">AMZN</span></td>
+                <td>Amazon</td>
+                <td style="color:#4ade80;text-align:center;font-weight:600">▲0.65%</td>
+                <td class="rs">쿠팡, 네이버</td>
+                <td class="rs">소폭 상승</td>
+            </tr>
+    </table>
+</div>
+
+<div class="sec">
+    <div class="st kr">2. 한국 증시 영향 분석</div>
+    <div class="sub-title gain">📈 상승 예상 섹터</div><table><tr><th>섹터</th><th>연관 종목</th><th>예상 영향</th></tr><tr><td>Utilities</td><td class="kr-stocks">한국전력, 한국가스공사, SK가스</td><td style="color:#4ade80">+1.02% 연동</td></tr><tr><td>Industrials</td><td class="kr-stocks">현대중공업, 두산에너빌리티, 한화에어로</td><td style="color:#4ade80">+0.92% 연동</td></tr><tr><td>Real Estate</td><td class="kr-stocks">삼성물산, 현대건설, 대우건설</td><td style="color:#4ade80">+0.75% 연동</td></tr></table><div class="sub-title lose">📉 하락 예상 섹터</div><table><tr><th>섹터</th><th>연관 종목</th><th>예상 영향</th></tr><tr><td>Communication</td><td class="kr-stocks">NAVER, 카카오, SK텔레콤</td><td style="color:#f87171">-0.37% 연동</td></tr><tr><td>Healthcare</td><td class="kr-stocks">삼성바이오, 셀트리온, 유한양행</td><td style="color:#f87171">-0.57% 연동</td></tr><tr><td>Energy</td><td class="kr-stocks">S-Oil, SK이노베이션, GS</td><td style="color:#f87171">-0.94% 연동</td></tr></table>
+</div>
+
+<div class="sec">
+    <div class="st pick">3. 기술적 분석 기반 유망 종목 TOP 3</div>
+    <div class="pick">
+            <div class="pick-header">
+                <span class="medal">🥇</span>
+                <span class="pick-name">삼성전자</span>
+                <span class="pick-code">(005930)</span>
+            </div>
+            <div class="pick-info">
+                <div class="pick-row"><span class="label">현재가</span><span class="value">55,000원</span></div>
+                <div class="pick-row"><span class="label">섹터</span><span class="value">반도체</span></div>
+                <div class="pick-row"><span class="label">연관</span><span class="value">반도체</span></div>
+            </div>
+            <div class="pick-rationale">💡 HBM 수요 증가, AI 반도체 수혜</div>
+        </div><div class="pick">
+            <div class="pick-header">
+                <span class="medal">🥈</span>
+                <span class="pick-name">SK하이닉스</span>
+                <span class="pick-code">(000660)</span>
+            </div>
+            <div class="pick-info">
+                <div class="pick-row"><span class="label">현재가</span><span class="value">180,000원</span></div>
+                <div class="pick-row"><span class="label">섹터</span><span class="value">반도체</span></div>
+                <div class="pick-row"><span class="label">연관</span><span class="value">반도체</span></div>
+            </div>
+            <div class="pick-rationale">💡 HBM 독점적 지위, NVIDIA 납품</div>
+        </div><div class="pick">
+            <div class="pick-header">
+                <span class="medal">🥉</span>
+                <span class="pick-name">LG에너지솔루션</span>
+                <span class="pick-code">(373220)</span>
+            </div>
+            <div class="pick-info">
+                <div class="pick-row"><span class="label">현재가</span><span class="value">380,000원</span></div>
+                <div class="pick-row"><span class="label">섹터</span><span class="value">2차전지</span></div>
+                <div class="pick-row"><span class="label">연관</span><span class="value">EV</span></div>
+            </div>
+            <div class="pick-rationale">💡 Tesla 배터리 공급, 북미 IRA 수혜</div>
+        </div>
+</div>
+
+<div class="ft">
+    ⚠️ 본 리포트는 시스템이 생성한 것으로 참고용입니다.<br>
+    투자는 시작가가 생성된 것으로 증거자료로 사용하지 마십시오.<br>
+    2026 Market Bot | Data: CNBC, Yahoo, Naver
+</div>
 </body>
 </html>
