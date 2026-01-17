@@ -2,20 +2,20 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Market Report 2026-01-17 (Sat) 12:45</title>
+<title>Market Report 2026-01-17 (Sat) 12:50</title>
 <style>
 :root{--bg:#0a0e17;--card:#131a2b;--card2:#1a2235;--border:#2a3a55;--text:#e8edf5;--text2:#a8b8c8;--up:#00ff88;--down:#ff6b6b;--accent:#6366f1}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;padding:12px;min-height:100vh}
-.header{text-align:center;padding:20px 0;margin-bottom:16px}
+.header{text-align:center;padding:12px 0;margin-bottom:10px}
 .header h1{font-size:1.3em;background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
 .header .ts{color:var(--text2);font-size:0.94em}
-.section{background:var(--card);border-radius:16px;padding:16px;margin-bottom:14px;border:1px solid var(--border)}
-.section-title{font-size:1.05em;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section{background:var(--card);border-radius:16px;padding:10px;margin-bottom:8px;border:1px solid var(--border)}
+.section-title{font-size:1.05em;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .section-title .icon{font-size:1.2em}
 
 /* 주요뉴스 */
-.headline-item{display:flex;gap:10px;padding:10px;background:var(--card2);border-radius:10px;margin-bottom:8px}
+.headline-item{display:flex;gap:8px;padding:6px;background:var(--card2);border-radius:10px;margin-bottom:5px}
 .headline-item.news-positive{border-left:3px solid var(--up)}
 .headline-item.news-negative{border-left:3px solid var(--down)}
 .headline-icon{font-size:1.3em}
@@ -23,7 +23,7 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 .headline-detail{font-size:0.94em;color:var(--text2)}
 
 /* 브리핑 */
-.brief{padding:8px 0;line-height:1.7;font-size:0.95em}
+.brief{padding:5px 0;line-height:1.6;font-size:0.95em}
 .brief b{color:#fff}
 .up{color:var(--up)!important;font-weight:600}
 .down{color:var(--down)!important;font-weight:600}
@@ -32,31 +32,31 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 .tag-down{background:rgba(255,107,107,0.15);color:var(--down)}
 
 /* 지수 */
-.idx-wrap{display:flex;gap:8px;overflow-x:auto;padding:4px 0;-webkit-overflow-scrolling:touch}
-.idx{flex:0 0 auto;min-width:85px;background:linear-gradient(135deg,var(--card2),#1e2942);border-radius:12px;padding:12px 10px;text-align:center}
+.idx-wrap{display:flex;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch}
+.idx{flex:0 0 auto;min-width:85px;background:linear-gradient(135deg,var(--card2),#1e2942);border-radius:12px;padding:8px 10px;text-align:center}
 .idx.ind{background:linear-gradient(135deg,#1a1a2e,#252547)}
 .idx-n{font-size:0.83em;color:var(--text2);margin-bottom:4px}
 .idx-p{font-size:1.05em;font-weight:700}
 .idx-c{font-size:0.9em;font-weight:700;margin-top:2px}
 
 /* 종목 아이템 */
-.item{background:var(--card2);border-radius:12px;padding:12px;margin-bottom:8px}
+.item{background:var(--card2);border-radius:12px;padding:8px;margin-bottom:5px}
 .item.gain{border-left:3px solid var(--up)}
 .item.lose{border-left:3px solid var(--down)}
-.item-top{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.item-top{display:flex;align-items:center;gap:8px;margin-bottom:3px;flex-wrap:wrap}
 .tk{background:var(--border);padding:3px 8px;border-radius:6px;font-family:monospace;font-size:0.88em;font-weight:600}
 .nm{font-weight:600}
 .chg{margin-left:auto;font-weight:700;font-size:0.95em}
-.item-news{font-size:0.95em;color:#7ec8f8;margin-bottom:4px}
+.item-news{font-size:0.95em;color:#7ec8f8;margin-bottom:2px}
 .item-kr{font-size:0.94em;color:#fbbf24}
 
 /* 한국 영향 */
-.kr-grid{display:flex;flex-direction:column;gap:12px}
-.kr-col{background:var(--card2);border-radius:12px;padding:14px}
+.kr-grid{display:flex;flex-direction:column;gap:7px}
+.kr-col{background:var(--card2);border-radius:12px;padding:8px}
 .kr-col.up{border-top:3px solid var(--up)}
 .kr-col.down{border-top:3px solid var(--down)}
-.kr-title{font-size:0.9em;font-weight:600;margin-bottom:10px}
-.kr-item{display:flex;flex-wrap:wrap;gap:4px;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.94em}
+.kr-title{font-size:0.9em;font-weight:600;margin-bottom:6px}
+.kr-item{display:flex;flex-wrap:wrap;gap:4px;padding:4px 0;border-bottom:1px solid var(--border);font-size:0.94em}
 .kr-item:last-child{border:none}
 .kr-sec{font-weight:600;min-width:60px}
 .kr-stocks{color:var(--text2);flex:1}
@@ -66,9 +66,9 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 
 /* 추천종목 */
 .no-pick{text-align:center;padding:30px;color:var(--text2);font-size:0.95em;line-height:1.8}
-.pick{background:var(--card2);border-radius:16px;padding:16px;margin-bottom:12px;border-left:4px solid var(--accent);position:relative;overflow:hidden}
+.pick{background:var(--card2);border-radius:16px;padding:10px;margin-bottom:7px;border-left:4px solid var(--accent);position:relative;overflow:hidden}
 .pick::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),transparent)}
-.pick-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.pick-header{display:flex;align-items:center;gap:10px;margin-bottom:7px}
 .pick-rank{width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9em}
 .pick-title{flex:1}
 .pick-name{font-size:1.1em;font-weight:700}
@@ -77,7 +77,7 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 .score-high{background:rgba(0,255,136,0.2);color:var(--up)}
 .score-mid{background:rgba(251,191,36,0.2);color:#fbbf24}
 .score-low{background:rgba(255,107,107,0.2);color:var(--down)}
-.pick-body{display:flex;gap:16px;margin-bottom:12px}
+.pick-body{display:flex;gap:16px;margin-bottom:7px}
 .pick-price{flex:1}
 .price-now{font-size:1.3em;font-weight:700;color:var(--up)}
 .price-target{font-size:0.94em;color:#f472b6;margin-top:4px}
@@ -85,17 +85,17 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 .tech-item{text-align:center}
 .tech-label{display:block;font-size:0.7em;color:var(--text2);margin-bottom:2px}
 .tech-val{font-size:0.9em;font-weight:600}
-.pick-signals{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
-.signal{background:rgba(99,102,241,0.2);color:#b5c4fc;padding:3px 10px;border-radius:12px;font-size:0.88em}
-.pick-reason{font-size:0.9em;color:var(--text2);line-height:1.6;padding:10px;background:rgba(99,102,241,0.05);border-radius:8px}
+.pick-signals{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px}
+.signal{background:rgba(99,102,241,0.2);color:#b5c4fc;padding:2px 8px;border-radius:12px;font-size:0.88em}
+.pick-reason{font-size:0.9em;color:var(--text2);line-height:1.5;padding:6px;background:rgba(99,102,241,0.05);border-radius:8px}
 
-.footer{text-align:center;padding:16px;color:var(--text2);font-size:0.88em}
+.footer{text-align:center;padding:10px;color:var(--text2);font-size:0.88em}
 </style>
 </head>
 <body>
 <div class="header">
     <h1>📊 미국 증시 분석 및 한국 증시 영향</h1>
-    <div class="ts">2026-01-17 (Sat) 12:45 마감 기준</div>
+    <div class="ts">2026-01-17 (Sat) 12:50 마감 기준</div>
 </div>
 
 <div class="section">
@@ -197,7 +197,7 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
                         <span class="pick-name">SK하이닉스</span>
                         <span class="pick-code">000660</span>
                     </div>
-                    <div class="pick-score score-low">관망 48점</div>
+                    <div class="pick-score score-low">48점</div>
                 </div>
                 <div class="pick-body">
                     <div class="pick-price">
@@ -214,7 +214,7 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
                         <span class="pick-name">삼성전자</span>
                         <span class="pick-code">005930</span>
                     </div>
-                    <div class="pick-score score-low">관망 44점</div>
+                    <div class="pick-score score-low">44점</div>
                 </div>
                 <div class="pick-body">
                     <div class="pick-price">
@@ -231,7 +231,7 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
                         <span class="pick-name">HD현대중공업</span>
                         <span class="pick-code">329180</span>
                     </div>
-                    <div class="pick-score score-low">관망 43점</div>
+                    <div class="pick-score score-low">43점</div>
                 </div>
                 <div class="pick-body">
                     <div class="pick-price">
@@ -248,7 +248,7 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
                         <span class="pick-name">삼성전기</span>
                         <span class="pick-code">009150</span>
                     </div>
-                    <div class="pick-score score-low">관망 43점</div>
+                    <div class="pick-score score-low">43점</div>
                 </div>
                 <div class="pick-body">
                     <div class="pick-price">
