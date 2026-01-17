@@ -1,222 +1,201 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Market Report 2026-01-17 (Sat) 09:55</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Market Report 2026-01-17 (Sat) 10:12</title>
 <style>
+:root{--bg:#0a0e17;--card:#131a2b;--card2:#1a2235;--border:#2a3a55;--text:#e8edf5;--text2:#8899aa;--up:#00ff88;--down:#ff6b6b;--accent:#6366f1}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:linear-gradient(135deg,#0d1117,#161b22);color:#e6edf3;font-size:15px;line-height:1.6;padding:14px;min-height:100vh}
-.hd{text-align:center;padding:18px 0;border-bottom:2px solid #30363d;margin-bottom:16px}
-.hd h1{font-size:1.4em;background:linear-gradient(90deg,#58a6ff,#a371f7,#f778ba);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.ts{color:#8b949e;font-size:0.9em;margin-top:6px}
-.summary{background:linear-gradient(135deg,#1c2128,#21262d);border-radius:12px;padding:16px;margin-bottom:16px;border:1px solid #30363d}
-.sum-line{margin-bottom:10px;line-height:1.7}
-.sum-line:last-child{margin-bottom:0}
-.sum-line b{color:#fff}
-.up{color:#00ff88!important;font-weight:600}
-.down{color:#ff6b6b!important;font-weight:600}
-.sector-up{color:#00ff88;background:rgba(0,255,136,0.1);padding:2px 6px;border-radius:4px}
-.sector-down{color:#ff6b6b;background:rgba(255,107,107,0.1);padding:2px 6px;border-radius:4px}
-.news-up{color:#00ff88;font-weight:600}
-.news-down{color:#ff6b6b;font-weight:600}
-.sec{background:#161b22;border-radius:12px;padding:16px;margin-bottom:14px;border:1px solid #30363d}
-.st{font-size:1.1em;font-weight:700;margin-bottom:14px;padding:10px 14px;border-radius:8px;display:flex;align-items:center;gap:10px}
-.st.main{background:linear-gradient(90deg,#1f6feb,#388bfd);color:#fff}
-.st.gain{background:linear-gradient(90deg,rgba(0,255,136,0.15),rgba(0,255,136,0.05));color:#00ff88;border-left:4px solid #00ff88}
-.st.lose{background:linear-gradient(90deg,rgba(255,107,107,0.15),rgba(255,107,107,0.05));color:#ff6b6b;border-left:4px solid #ff6b6b}
-.st.kr{background:linear-gradient(90deg,rgba(251,191,36,0.15),rgba(251,191,36,0.05));color:#fbbf24;border-left:4px solid #fbbf24}
-.st.pick{background:linear-gradient(90deg,rgba(163,113,247,0.15),rgba(163,113,247,0.05));color:#a371f7;border-left:4px solid #a371f7}
-.idx-wrap{display:flex;gap:10px;overflow-x:auto;flex-wrap:wrap;padding:6px 0}
-.idx{flex:0 0 auto;min-width:90px;background:linear-gradient(135deg,#21262d,#30363d);border-radius:10px;padding:12px 10px;text-align:center;border:1px solid #30363d}
-.idx.ind{background:#1a1a2e;border:1px dashed #30363d}
-.idx-n{font-size:0.8em;color:#8b949e;margin-bottom:4px}
-.idx-p{font-size:1.1em;font-weight:700}
-.idx-c{font-size:0.95em;font-weight:600}
-.sub-label{font-size:1em;font-weight:600;color:#8b949e;margin:14px 0 10px;padding-left:10px;border-left:3px solid #30363d}
-.item{background:#21262d;border-radius:10px;padding:12px;margin-bottom:10px}
-.item.gain{border-left:3px solid #00ff88}
-.item.lose{border-left:3px solid #ff6b6b}
-.item-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
-.tk{background:#30363d;padding:4px 8px;border-radius:5px;font-family:monospace;font-size:0.85em;font-weight:600}
-.nm{font-weight:600;font-size:1.05em}
-.chg{font-weight:700;font-size:1em;margin-left:auto}
-.chg.up{color:#00ff88}
-.chg.down{color:#ff6b6b}
-.item-news{font-size:0.95em;color:#58a6ff;margin-bottom:6px;font-weight:500}
-.item-detail{font-size:0.9em;color:#8b949e;margin-bottom:8px;line-height:1.5}
-.item-kr{font-size:0.9em;color:#fbbf24;background:rgba(251,191,36,0.1);padding:6px 10px;border-radius:6px;display:inline-block}
-.kr-box{margin-bottom:12px;padding:12px;border-radius:10px}
-.kr-box.up{background:rgba(0,255,136,0.05);border:1px solid rgba(0,255,136,0.2)}
-.kr-box.down{background:rgba(255,107,107,0.05);border:1px solid rgba(255,107,107,0.2)}
-.kr-label{font-size:1em;font-weight:600;margin-bottom:10px}
-.kr-box.up .kr-label{color:#00ff88}
-.kr-box.down .kr-label{color:#ff6b6b}
-.kr-row{display:flex;align-items:center;padding:8px 10px;background:#21262d;border-radius:8px;margin-bottom:6px;gap:12px}
-.kr-sec{font-weight:600;min-width:80px}
-.kr-stk{color:#fbbf24;font-size:0.9em;flex:1}
-.kr-chg{font-weight:600}
-.kr-chg.up{color:#00ff88}
-.kr-chg.down{color:#ff6b6b}
-.pick{background:#21262d;border-radius:12px;padding:14px;margin-bottom:12px}
-.pick-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #30363d}
-.medal{font-size:1em;font-weight:700;color:#ffd700;background:#30363d;padding:4px 10px;border-radius:6px}
-.pick-name{font-size:1.15em;font-weight:700}
-.pick-code{font-size:0.85em;color:#8b949e}
-.pick-info{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.pick-row{display:flex;gap:8px;align-items:center}
-.lbl{font-size:0.85em;color:#8b949e;min-width:50px}
-.val{font-size:0.95em;font-weight:500}
-.val.price{color:#00ff88;font-weight:700;font-size:1.05em}
-.val.target{color:#f778ba}
-.val.us{color:#58a6ff}
-.pick-reason{background:linear-gradient(90deg,rgba(165,214,255,0.1),rgba(165,214,255,0.05));padding:12px;border-radius:8px;font-size:0.95em;color:#a5d6ff;line-height:1.6}
-.ft{text-align:center;padding:16px;color:#6e7681;font-size:0.85em;border-top:1px solid #30363d;margin-top:16px}
+body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;padding:12px;min-height:100vh}
+.header{text-align:center;padding:20px 0;margin-bottom:16px}
+.header h1{font-size:1.3em;background:linear-gradient(135deg,#6366f1,#8b5cf6,#d946ef);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+.header .ts{color:var(--text2);font-size:0.85em}
+.section{background:var(--card);border-radius:16px;padding:16px;margin-bottom:14px;border:1px solid var(--border)}
+.section-title{font-size:1.05em;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section-title .icon{font-size:1.2em}
+
+/* 주요뉴스 */
+.headline-item{display:flex;gap:10px;padding:10px;background:var(--card2);border-radius:10px;margin-bottom:8px}
+.headline-item.news-positive{border-left:3px solid var(--up)}
+.headline-item.news-negative{border-left:3px solid var(--down)}
+.headline-icon{font-size:1.3em}
+.headline-title{font-weight:600;font-size:0.95em;margin-bottom:4px}
+.headline-detail{font-size:0.85em;color:var(--text2)}
+
+/* 브리핑 */
+.brief{padding:8px 0;line-height:1.7;font-size:0.95em}
+.brief b{color:#fff}
+.up{color:var(--up)!important;font-weight:600}
+.down{color:var(--down)!important;font-weight:600}
+.tag-up,.tag-down{padding:2px 8px;border-radius:12px;font-size:0.85em;font-weight:600}
+.tag-up{background:rgba(0,255,136,0.15);color:var(--up)}
+.tag-down{background:rgba(255,107,107,0.15);color:var(--down)}
+
+/* 지수 */
+.idx-wrap{display:flex;gap:8px;overflow-x:auto;padding:4px 0;-webkit-overflow-scrolling:touch}
+.idx{flex:0 0 auto;min-width:85px;background:linear-gradient(135deg,var(--card2),#1e2942);border-radius:12px;padding:12px 10px;text-align:center}
+.idx.ind{background:linear-gradient(135deg,#1a1a2e,#252547)}
+.idx-n{font-size:0.75em;color:var(--text2);margin-bottom:4px}
+.idx-p{font-size:1.05em;font-weight:700}
+.idx-c{font-size:0.9em;font-weight:700;margin-top:2px}
+
+/* 종목 아이템 */
+.item{background:var(--card2);border-radius:12px;padding:12px;margin-bottom:8px}
+.item.gain{border-left:3px solid var(--up)}
+.item.lose{border-left:3px solid var(--down)}
+.item-top{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.tk{background:var(--border);padding:3px 8px;border-radius:6px;font-family:monospace;font-size:0.8em;font-weight:600}
+.nm{font-weight:600}
+.chg{margin-left:auto;font-weight:700;font-size:0.95em}
+.item-news{font-size:0.9em;color:#64b5f6;margin-bottom:4px}
+.item-kr{font-size:0.85em;color:#fbbf24}
+
+/* 한국 영향 */
+.kr-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kr-col{background:var(--card2);border-radius:12px;padding:12px}
+.kr-col.up{border-top:3px solid var(--up)}
+.kr-col.down{border-top:3px solid var(--down)}
+.kr-title{font-size:0.9em;font-weight:600;margin-bottom:10px}
+.kr-item{display:flex;flex-wrap:wrap;gap:4px;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85em}
+.kr-item:last-child{border:none}
+.kr-sec{font-weight:600;min-width:60px}
+.kr-stocks{color:var(--text2);flex:1}
+.kr-pct{font-weight:600}
+.kr-pct.up{color:var(--up)}
+.kr-pct.down{color:var(--down)}
+
+/* 추천종목 */
+.no-pick{text-align:center;padding:30px;color:var(--text2);font-size:0.95em;line-height:1.8}
+.pick{background:var(--card2);border-radius:16px;padding:16px;margin-bottom:12px;border-left:4px solid var(--accent);position:relative;overflow:hidden}
+.pick::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),transparent)}
+.pick-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.pick-rank{width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9em}
+.pick-title{flex:1}
+.pick-name{font-size:1.1em;font-weight:700}
+.pick-code{font-size:0.8em;color:var(--text2);margin-left:6px}
+.pick-score{padding:4px 10px;border-radius:20px;font-size:0.8em;font-weight:600}
+.score-high{background:rgba(0,255,136,0.2);color:var(--up)}
+.score-mid{background:rgba(251,191,36,0.2);color:#fbbf24}
+.score-low{background:rgba(255,107,107,0.2);color:var(--down)}
+.pick-body{display:flex;gap:16px;margin-bottom:12px}
+.pick-price{flex:1}
+.price-now{font-size:1.3em;font-weight:700;color:var(--up)}
+.price-target{font-size:0.85em;color:#f472b6;margin-top:4px}
+.pick-tech{display:flex;gap:12px;flex:1;align-items:center}
+.tech-item{text-align:center}
+.tech-label{display:block;font-size:0.7em;color:var(--text2);margin-bottom:2px}
+.tech-val{font-size:0.9em;font-weight:600}
+.pick-signals{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.signal{background:rgba(99,102,241,0.2);color:#a5b4fc;padding:3px 10px;border-radius:12px;font-size:0.8em}
+.pick-reason{font-size:0.9em;color:var(--text2);line-height:1.6;padding:10px;background:rgba(99,102,241,0.05);border-radius:8px}
+
+.footer{text-align:center;padding:16px;color:var(--text2);font-size:0.8em}
 </style>
 </head>
 <body>
-<div class="hd">
-    <h1>미국 증시 분석 및 한국 증시 영향 리포트</h1>
-    <div class="ts">2026-01-17 (Sat) 09:55 마감 기준</div>
+<div class="header">
+    <h1>📊 미국 증시 분석 및 한국 증시 영향</h1>
+    <div class="ts">2026-01-17 (Sat) 10:12 마감 기준</div>
 </div>
 
-<div class="summary"><div class='sum-line'><b>미국 증시 보합 마감.</b> S&P500 <span class='down'>-0.08%</span>, 나스닥 <span class='down'>-0.08%</span>, 다우 <span class='down'>-0.18%</span>. 차익실현 매물과 저가매수 공방.</div><div class='sum-line'>강세: <span class='sector-up'>부동산(+1.2%)</span>, <span class='sector-up'>산업재(+0.7%)</span> | 약세: <span class='sector-down'>필수소비재(-0.3%)</span>, <span class='sector-down'>경기소비재(-0.3%)</span>, <span class='sector-down'>유틸리티(-0.5%)</span></div><div class='sum-line'><span class='news-up'>Broadcom(+2.5%)</span>: Wells Fargo Overweight 업그레이드 | <span class='news-down'>Apple(-1.0%)</span>: TSMC 실적에 iPhone 17 수요 확인</div></div>
+<div class="section">
+    <div class="section-title"><span class="icon">📰</span> 주요 뉴스</div>
+    <div class="headline-item news-positive">
+            <span class="headline-icon">📈</span>
+            <div class="headline-content">
+                <div class="headline-title">TSMC Q4 순이익 35% 급증, 2026 CAPEX $56B 발표</div>
+                <div class="headline-detail">AI 칩 수요 폭발로 역대최대 실적. CEO 'AI 버블 아니다' 발언으로 반도체 랠리</div>
+            </div>
+        </div><div class="headline-item news-positive">
+            <span class="headline-icon">📈</span>
+            <div class="headline-content">
+                <div class="headline-title">트럼프, 국방비 50% 증액 $1.5조 제안</div>
+                <div class="headline-detail">방산주 Lockheed +7%, Northrop +7% 급등. 한국 방산 수혜 기대</div>
+            </div>
+        </div><div class="headline-item news-negative">
+            <span class="headline-icon">📉</span>
+            <div class="headline-content">
+                <div class="headline-title">유가 5% 급락, WTI $59.19</div>
+                <div class="headline-detail">트럼프 이란 군사행동 보류 시사. Goldman 2026 WTI $52 전망</div>
+            </div>
+        </div><div class="headline-item news-positive">
+            <span class="headline-icon">📈</span>
+            <div class="headline-content">
+                <div class="headline-title">Meta, Vistra·Oklo와 원자력 전력 계약</div>
+                <div class="headline-detail">AI 데이터센터 전력 수요 급증. 유틸리티 섹터 수혜</div>
+            </div>
+        </div>
+</div>
 
-<div class="sec">
-    <div class="st main">1. 미국 증시 마감 현황</div>
+<div class="section">
+    <div class="section-title"><span class="icon">🇺🇸</span> 미국 증시 마감</div>
+    <div class='brief'><b>미국 증시 보합 마감.</b> S&P500 <span class='down'>-0.08%</span>, 나스닥 <span class='down'>-0.08%</span>, 다우 <span class='down'>-0.18%</span></div><div class='brief'>강세: <span class='tag-up'>부동산+1.2%</span>, <span class='tag-up'>산업재+0.7%</span> 약세: <span class='tag-down'>필수소비재-0.3%</span>, <span class='tag-down'>경기소비재-0.3%</span>, <span class='tag-down'>유틸리티-0.5%</span></div>
     <div class="idx-wrap"><div class="idx"><div class="idx-n">S&P500</div><div class="idx-p">691.66</div><div class="idx-c" style="color:#ff6b6b">▼0.08%</div></div><div class="idx"><div class="idx-n">NASDAQ</div><div class="idx-p">621.26</div><div class="idx-c" style="color:#ff6b6b">▼0.08%</div></div><div class="idx"><div class="idx-n">DOW</div><div class="idx-p">493.42</div><div class="idx-c" style="color:#ff6b6b">▼0.18%</div></div><div class="idx ind"><div class="idx-n">VIX</div><div class="idx-p">15.86</div><div class="idx-c" style="color:#00ff88">+0.00%</div></div><div class="idx ind"><div class="idx-n">WTI</div><div class="idx-p">59.22</div><div class="idx-c" style="color:#00ff88">+0.00%</div></div><div class="idx ind"><div class="idx-n">Gold</div><div class="idx-p">4,601.10</div><div class="idx-c" style="color:#00ff88">+0.00%</div></div></div>
 </div>
 
-<div class="sec">
-    <div class="st gain">상승 종목 및 섹터</div>
-    <div class="sub-label">상승 종목</div><div class="item gain">
-            <div class="item-head"><span class="tk">AVGO</span><span class="nm">Broadcom</span><span class="chg up">▲2.53%</span></div>
-            <div class="item-news">Wells Fargo Overweight 업그레이드</div>
-            <div class="item-detail">TSMC CoWoS 용량 확대로 AI 칩 공급 개선. Anthropic $21B Google TPU 주문 수혜 기대</div>
-            <div class="item-kr">연관: 삼성전기</div>
+<div class="section">
+    <div class="section-title"><span class="icon">🟢</span> 상승 종목</div>
+    <div class="item gain">
+            <div class="item-top"><span class="tk">AVGO</span><span class="nm">Broadcom</span><span class="chg up">+2.53%</span></div>
+            <div class="item-news">CoWoS 확대 수혜 +2.5%</div>
+            <div class="item-kr">→ 삼성전기</div>
         </div><div class="item gain">
-            <div class="item-head"><span class="tk">AMD</span><span class="nm">AMD</span><span class="chg up">▲1.72%</span></div>
-            <div class="item-news">Wells Fargo 반도체 최선호주 선정</div>
-            <div class="item-detail">2025년 90% 상승 vs NVDA 37%. 서버 CPU 수요 강세. 2/3 실적발표 기대</div>
-            <div class="item-kr">연관: 한미반도체</div>
+            <div class="item-top"><span class="tk">AMD</span><span class="nm">AMD</span><span class="chg up">+1.72%</span></div>
+            <div class="item-news">Wells Fargo '2026 최선호 반도체주'</div>
+            <div class="item-kr">→ 한미반도체</div>
         </div><div class="item gain">
-            <div class="item-head"><span class="tk">MSFT</span><span class="nm">Microsoft</span><span class="chg up">▲0.70%</span></div>
-            <div class="item-news">Azure AI 용량 부족, 수요 > 공급</div>
-            <div class="item-detail">CFO: AI 인프라 수요가 공급 초과. 1Q 2026 $35B AI 투자 예정</div>
-            <div class="item-kr">연관: 삼성SDS</div>
+            <div class="item-top"><span class="tk">MSFT</span><span class="nm">Microsoft</span><span class="chg up">+0.70%</span></div>
+            <div class="item-news">Azure AI 용량 부족 심화</div>
+            <div class="item-kr">→ 삼성SDS</div>
         </div><div class="item gain">
-            <div class="item-head"><span class="tk">AMZN</span><span class="nm">Amazon</span><span class="chg up">▲0.39%</span></div>
-            <div class="item-news">AWS Bedrock AI 서비스 채택 급증</div>
-            <div class="item-detail">Rio Tinto 구리 공급 계약으로 데이터센터 인프라 확대</div>
-            <div class="item-kr">연관: 쿠팡</div>
+            <div class="item-top"><span class="tk">AMZN</span><span class="nm">Amazon</span><span class="chg up">+0.39%</span></div>
+            <div class="item-news">이커머스</div>
+            <div class="item-kr">→ 쿠팡</div>
         </div><div class="item gain">
-            <div class="item-head"><span class="tk">TSM</span><span class="nm">TSMC</span><span class="chg up">▲0.22%</span></div>
-            <div class="item-news">TSMC Q4 순이익 35% 급증! 2026 CAPEX $56B 역대최대</div>
-            <div class="item-detail">매출 $33.7B 사상최대, 총마진 62.3% 신기록. CEO 'AI 버블 아니다, 클라우드 수요 매우 강력'. NVDA에 80만장 웨이퍼 공급 확정. 3nm 매출비중 28%</div>
-            <div class="item-kr">연관: 삼성전자</div>
-        </div><div class="sub-label">상승 섹터</div><div class="item gain">
-            <div class="item-head"><span class="tk">XLRE</span><span class="nm">부동산</span><span class="chg up">▲1.22%</span></div>
-            <div class="item-news">건설/리츠 섹터 강세</div>
-            <div class="item-detail">투자심리 개선</div>
-            <div class="item-kr">연관: 삼성물산, 현대건설</div>
-        </div><div class="item gain">
-            <div class="item-head"><span class="tk">XLI</span><span class="nm">산업재</span><span class="chg up">▲0.68%</span></div>
-            <div class="item-news">트럼프 국방비 50%↑ $1.5조 제안</div>
-            <div class="item-detail">방산주 Lockheed +7%, Northrop +7% 급등. 인프라 투자 기대</div>
-            <div class="item-kr">연관: 현대중공업, 한화에어로</div>
-        </div><div class="item gain">
-            <div class="item-head"><span class="tk">XLE</span><span class="nm">에너지</span><span class="chg up">▲0.17%</span></div>
-            <div class="item-news">유가 5% 급락, WTI $59.19</div>
-            <div class="item-detail">트럼프 이란 군사행동 철회 시사. Goldman 2026 WTI $52 전망</div>
-            <div class="item-kr">연관: S-Oil, SK이노베이션</div>
+            <div class="item-top"><span class="tk">TSM</span><span class="nm">TSMC</span><span class="chg up">+0.22%</span></div>
+            <div class="item-news">TSMC Q4 순이익 35% 급증, CAPEX $56B</div>
+            <div class="item-kr">→ 삼성전자</div>
         </div>
 </div>
 
-<div class="sec">
-    <div class="st lose">하락 종목 및 섹터</div>
-    <div class="sub-label">하락 종목</div><div class="item lose">
-            <div class="item-head"><span class="tk">AAPL</span><span class="nm">Apple</span><span class="chg down">▼1.04%</span></div>
-            <div class="item-news">TSMC 실적에 iPhone 17 수요 확인</div>
-            <div class="item-detail">TSMC 4Q 모바일 칩 매출 호조. 서비스 사업 성장 지속 전망</div>
-            <div class="item-kr">영향: LG이노텍</div>
+<div class="section">
+    <div class="section-title"><span class="icon">🔴</span> 하락 종목</div>
+    <div class="item lose">
+            <div class="item-top"><span class="tk">AAPL</span><span class="nm">Apple</span><span class="chg down">-1.04%</span></div>
+            <div class="item-news">아이폰</div>
+            <div class="item-kr">→ LG이노텍</div>
         </div><div class="item lose">
-            <div class="item-head"><span class="tk">GOOGL</span><span class="nm">Google</span><span class="chg down">▼0.84%</span></div>
-            <div class="item-news">Gemini AI 채택 확대 지속</div>
-            <div class="item-detail">기업용 AI 솔루션 수요 증가. 광고 시장 회복과 AI 수익화 본격화 기대</div>
-            <div class="item-kr">영향: NAVER</div>
+            <div class="item-top"><span class="tk">GOOGL</span><span class="nm">Google</span><span class="chg down">-0.84%</span></div>
+            <div class="item-news">광고/AI</div>
+            <div class="item-kr">→ NAVER</div>
         </div><div class="item lose">
-            <div class="item-head"><span class="tk">NVDA</span><span class="nm">Nvidia</span><span class="chg down">▼0.44%</span></div>
-            <div class="item-news">TSMC 수혜 지속, RBC 목표가 $240</div>
-            <div class="item-detail">MS Azure 용량 부족으로 GPU 수요 지속 확인. 2/25 실적발표 기대감. 트럼프 H200 관세 25% 영향 제한적</div>
-            <div class="item-kr">영향: SK하이닉스</div>
+            <div class="item-top"><span class="tk">NVDA</span><span class="nm">Nvidia</span><span class="chg down">-0.44%</span></div>
+            <div class="item-news">TSMC 수혜 +2.1%, 웨이퍼 80만장 확보</div>
+            <div class="item-kr">→ SK하이닉스</div>
         </div><div class="item lose">
-            <div class="item-head"><span class="tk">TSLA</span><span class="nm">Tesla</span><span class="chg down">▼0.24%</span></div>
-            <div class="item-news">전기차 경쟁 심화 속 혼조세</div>
-            <div class="item-detail">중국 BYD 경쟁 격화. FSD 수익화와 로보택시 기대감 vs 마진 압박</div>
-            <div class="item-kr">영향: LG엔솔</div>
+            <div class="item-top"><span class="tk">TSLA</span><span class="nm">Tesla</span><span class="chg down">-0.24%</span></div>
+            <div class="item-news">전기차</div>
+            <div class="item-kr">→ LG엔솔</div>
         </div><div class="item lose">
-            <div class="item-head"><span class="tk">META</span><span class="nm">Meta</span><span class="chg down">▼0.09%</span></div>
-            <div class="item-news">Vistra·Oklo와 원자력 전력 공급 계약</div>
-            <div class="item-detail">AI 데이터센터 전력 확보. Vistra +16%, Oklo +18% 급등</div>
-            <div class="item-kr">영향: 카카오</div>
-        </div><div class="sub-label">하락 섹터</div><div class="item lose">
-            <div class="item-head"><span class="tk">XLC</span><span class="nm">커뮤니케이션</span><span class="chg down">▼0.89%</span></div>
-            <div class="item-news">통신 섹터 혼조세 지속</div>
-            <div class="item-detail">광고 시장 회복 vs 규제 불확실성. 스트리밍 경쟁 심화</div>
-            <div class="item-kr">연관: NAVER, 카카오</div>
-        </div><div class="item lose">
-            <div class="item-head"><span class="tk">XLV</span><span class="nm">헬스케어</span><span class="chg down">▼0.78%</span></div>
-            <div class="item-news">헬스케어 혼조, Boston Scientific M&A 활발</div>
-            <div class="item-detail">Penumbra 인수 $14.5B. 바이오텍 차익실현 압력</div>
-            <div class="item-kr">연관: 삼성바이오, 셀트리온</div>
-        </div><div class="item lose">
-            <div class="item-head"><span class="tk">XLB</span><span class="nm">소재</span><span class="chg down">▼0.57%</span></div>
-            <div class="item-news">철강/화학 섹터 약세</div>
-            <div class="item-detail">차익실현 압력</div>
-            <div class="item-kr">연관: POSCO홀딩스, LG화학</div>
+            <div class="item-top"><span class="tk">META</span><span class="nm">Meta</span><span class="chg down">-0.09%</span></div>
+            <div class="item-news">원자력 전력 공급 계약 체결</div>
+            <div class="item-kr">→ 카카오</div>
         </div>
 </div>
 
-<div class="sec">
-    <div class="st kr">2. 한국 증시 영향 분석</div>
-    <div class="kr-box up"><div class="kr-label">상승 예상</div><div class="kr-row"><span class="kr-sec">부동산</span><span class="kr-stk">삼성물산, 현대건설</span><span class="kr-chg up">+1.22%</span></div><div class="kr-row"><span class="kr-sec">산업재</span><span class="kr-stk">현대중공업, 한화에어로</span><span class="kr-chg up">+0.68%</span></div><div class="kr-row"><span class="kr-sec">에너지</span><span class="kr-stk">S-Oil, SK이노베이션</span><span class="kr-chg up">+0.17%</span></div></div><div class="kr-box down"><div class="kr-label">하락 예상</div><div class="kr-row"><span class="kr-sec">소재</span><span class="kr-stk">POSCO홀딩스, LG화학</span><span class="kr-chg down">-0.57%</span></div><div class="kr-row"><span class="kr-sec">헬스케어</span><span class="kr-stk">삼성바이오, 셀트리온</span><span class="kr-chg down">-0.78%</span></div><div class="kr-row"><span class="kr-sec">커뮤니케이션</span><span class="kr-stk">NAVER, 카카오</span><span class="kr-chg down">-0.89%</span></div></div>
+<div class="section">
+    <div class="section-title"><span class="icon">🇰🇷</span> 한국 증시 영향</div>
+    <div class="kr-grid"><div class="kr-col up"><div class="kr-title">📈 상승 예상</div><div class="kr-item"><span class="kr-sec">부동산</span><span class="kr-stocks">삼성물산, 현대건설</span><span class="kr-pct up">+1.2%</span></div><div class="kr-item"><span class="kr-sec">산업재</span><span class="kr-stocks">현대중공업, 한화에어로</span><span class="kr-pct up">+0.7%</span></div><div class="kr-item"><span class="kr-sec">에너지</span><span class="kr-stocks">S-Oil, SK이노베이션</span><span class="kr-pct up">+0.2%</span></div></div><div class="kr-col down"><div class="kr-title">📉 하락 예상</div><div class="kr-item"><span class="kr-sec">소재</span><span class="kr-stocks">POSCO홀딩스, LG화학</span><span class="kr-pct down">-0.6%</span></div><div class="kr-item"><span class="kr-sec">헬스케어</span><span class="kr-stocks">삼성바이오, 셀트리온</span><span class="kr-pct down">-0.8%</span></div><div class="kr-item"><span class="kr-sec">커뮤니케이션</span><span class="kr-stocks">NAVER, 카카오</span><span class="kr-pct down">-0.9%</span></div></div></div>
 </div>
 
-<div class="sec">
-    <div class="st pick">3. 기술적 분석 기반 유망 종목 TOP 3</div>
-    <div class="pick" style="border-left:4px solid #ffd700">
-            <div class="pick-head"><span class="medal">1위</span><span class="pick-name">삼성전자</span><span class="pick-code">(005930)</span></div>
-            <div class="pick-info">
-                <div class="pick-row"><span class="lbl">현재가</span><span class="val price">148,900원</span></div>
-                <div class="pick-row"><span class="lbl">목표가</span><span class="val target">156,345원 ~ 160,812원</span></div>
-                <div class="pick-row"><span class="lbl">섹터</span><span class="val">반도체</span></div>
-                <div class="pick-row"><span class="lbl">연관</span><span class="val us">전반적</span></div>
-            </div>
-            <div class="pick-reason">HBM/파운드리 테마 강세. 외국인/기관 매수세 유입 기대</div>
-        </div><div class="pick" style="border-left:4px solid #c0c0c0">
-            <div class="pick-head"><span class="medal">2위</span><span class="pick-name">SK하이닉스</span><span class="pick-code">(000660)</span></div>
-            <div class="pick-info">
-                <div class="pick-row"><span class="lbl">현재가</span><span class="val price">756,000원</span></div>
-                <div class="pick-row"><span class="lbl">목표가</span><span class="val target">793,800원 ~ 816,480원</span></div>
-                <div class="pick-row"><span class="lbl">섹터</span><span class="val">반도체</span></div>
-                <div class="pick-row"><span class="lbl">연관</span><span class="val us">전반적</span></div>
-            </div>
-            <div class="pick-reason">HBM/AI메모리 테마 강세. 외국인/기관 매수세 유입 기대</div>
-        </div><div class="pick" style="border-left:4px solid #cd7f32">
-            <div class="pick-head"><span class="medal">3위</span><span class="pick-name">LG에너지솔루션</span><span class="pick-code">(373220)</span></div>
-            <div class="pick-info">
-                <div class="pick-row"><span class="lbl">현재가</span><span class="val price">380,000원</span></div>
-                <div class="pick-row"><span class="lbl">목표가</span><span class="val target">400,000원 ~ 420,000원</span></div>
-                <div class="pick-row"><span class="lbl">섹터</span><span class="val">2차전지</span></div>
-                <div class="pick-row"><span class="lbl">연관</span><span class="val us">경기소비재</span></div>
-            </div>
-            <div class="pick-reason">Tesla 배터리 공급 확대, 북미 IRA 수혜</div>
-        </div>
+<div class="section">
+    <div class="section-title"><span class="icon">🎯</span> 기술적 분석 유망 종목 (최대 4개)</div>
+    <div class="no-pick">⚠️ 현재 기술적 분석 조건을 충족하는 추천 종목이 없습니다.<br>시장 상황을 지켜봐 주세요.</div>
 </div>
 
-<div class="ft">
-    본 리포트는 참고용이며 투자 권유가 아닙니다.<br>
-    투자 결정은 본인의 판단과 책임 하에 이루어져야 합니다.<br><br>
-    2026 Market Bot | Data: CNBC, Yahoo, Naver
+<div class="footer">
+    ⚠️ 본 리포트는 참고용이며 투자 권유가 아닙니다.<br>
+    RSI, 이동평균, 거래량 기반 기술적 분석 | Data: CNBC, Yahoo, Naver
 </div>
 </body>
 </html>
