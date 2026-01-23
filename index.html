@@ -63,13 +63,24 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 
 /* 추천 */
 .no-pick{text-align:center;padding:30px;color:var(--text2)}
-.pick{background:var(--card2);border-radius:16px;padding:10px;margin-bottom:7px;border-left:4px solid var(--accent)}
-.pick-header{display:flex;align-items:center;gap:10px;margin-bottom:7px}
-.pick-rank{width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+.pick{background:var(--card2);border-radius:16px;padding:12px;margin-bottom:8px;border-left:4px solid var(--accent);position:relative}
+.pick::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.pick-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.pick-rank{width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9em}
+.pick-title{flex:1}
 .pick-name{font-size:1.1em;font-weight:700}
 .pick-code{font-size:0.85em;color:var(--text2);margin-left:6px}
-.pick-reason{font-size:0.9em;color:var(--text2);margin-bottom:6px}
-.pick-strategy{font-size:0.9em;color:#f472b6;padding:6px;background:rgba(99,102,241,0.1);border-radius:6px}
+.pick-score{padding:4px 10px;border-radius:20px;font-size:0.85em;font-weight:600}
+.score-high{background:rgba(0,255,136,0.2);color:var(--up)}
+.score-mid{background:rgba(251,191,36,0.2);color:#fbbf24}
+.score-low{background:rgba(255,107,107,0.2);color:var(--down)}
+.pick-price{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+.price-now{font-size:1.15em;font-weight:700}
+.price-rsi{font-size:0.85em;color:var(--text2);background:var(--border);padding:2px 8px;border-radius:10px}
+.pick-signals{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.signal{background:rgba(99,102,241,0.2);color:#b5c4fc;padding:3px 10px;border-radius:12px;font-size:0.85em}
+.pick-reason{font-size:0.9em;color:var(--text2);margin-bottom:8px;line-height:1.5}
+.pick-strategy{font-size:0.88em;color:#f472b6;padding:8px;background:rgba(244,114,182,0.1);border-radius:8px}
 
 /* 리스크 */
 .risk-item{padding:10px;background:rgba(239,68,68,0.1);border-radius:6px;margin-bottom:6px;font-size:0.9em}
@@ -83,72 +94,102 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
 <body>
 <div class="header">
     <h1>📊 Daily Market Report (Hybrid)</h1>
-    <div class="ts">2026-01-23 | 2026-01-23 07:59 기준</div>
-    <div class="method">분석: 규칙 기반 분석</div>
+    <div class="ts">2026-01-23 | 2026-01-23 09:08 기준</div>
+    <div class="method">분석: Claude AI + 웹검색</div>
 </div>
 
 <div class="summary-box">
     <strong>📌 시장 요약</strong>
-    <p style="margin-top:8px">미국 증시 강세 마감. S&P500 +0.52%, NASDAQ +0.73% 상승.</p>
+    <p style="margin-top:8px">미국 증시 상승 마감. S&P500 +0.52%, NASDAQ +0.73% 기록. 주요 지수 모두 상승세 유지.</p>
 </div>
 
 <div class="section">
     <div class="section-title">📰 주요 뉴스</div>
-    <div class="no-news">뉴스 데이터 없음 (규칙 기반 분석)</div>
+    <div class="headline-item news-positive">
+            <span class="headline-icon">📈</span>
+            <div class="headline-content">
+                <div class="headline-title">뉴욕증시, S&P500 0.52% 상승 마감</div>
+                <div class="headline-detail">강세장 분위기 지속. 투자심리 개선으로 위험자산 선호 확대.</div>
+            </div>
+        </div><div class="headline-item news-positive">
+            <span class="headline-icon">📈</span>
+            <div class="headline-content">
+                <div class="headline-title">커뮤니케이션 섹터 1.41% 상승, 시장 주도</div>
+                <div class="headline-detail"> 관련주 강세. 국내 연관주  등 긍정적 영향 예상.</div>
+            </div>
+        </div><div class="headline-item news-positive">
+            <span class="headline-icon">📈</span>
+            <div class="headline-content">
+                <div class="headline-title">경기소비재 섹터 1.00% 상승, 시장 주도</div>
+                <div class="headline-detail">자동차/유통 관련주 강세. 국내 연관주 현대차, 기아 등 긍정적 영향 예상.</div>
+            </div>
+        </div><div class="headline-item news-negative">
+            <span class="headline-icon">📉</span>
+            <div class="headline-content">
+                <div class="headline-title">유틸리티 섹터 0.72% 하락, 부진</div>
+                <div class="headline-detail"> 관련 종목 매도 압력. 국내 연관주 동반 약세 가능.</div>
+            </div>
+        </div><div class="headline-item news-negative">
+            <span class="headline-icon">📉</span>
+            <div class="headline-content">
+                <div class="headline-title">부동산 섹터 0.99% 하락, 부진</div>
+                <div class="headline-detail"> 관련 종목 매도 압력. 국내 연관주 동반 약세 가능.</div>
+            </div>
+        </div>
 </div>
 
 <div class="section">
     <div class="section-title">📈 미국 증시 마감</div>
-    <div class="idx-wrap"><div class="idx"><div class="idx-n">S&P500</div><div class="idx-p">688.98</div><div class="idx-c" style="color:#00ff88">▲0.52%</div></div><div class="idx"><div class="idx-n">NASDAQ</div><div class="idx-p">620.76</div><div class="idx-c" style="color:#00ff88">▲0.73%</div></div><div class="idx"><div class="idx-n">DOW</div><div class="idx-p">493.69</div><div class="idx-c" style="color:#00ff88">▲0.59%</div></div><div class="idx"><div class="idx-n">Russell 2000</div><div class="idx-p">269.79</div><div class="idx-c" style="color:#00ff88">▲0.75%</div></div><div class="idx ind"><div class="idx-n">VIX</div><div class="idx-p">15.64</div><div class="idx-c" style="color:#ff6b6b">-7.46%</div></div><div class="idx ind"><div class="idx-n">WTI</div><div class="idx-p">59.67</div><div class="idx-c" style="color:#ff6b6b">-1.57%</div></div><div class="idx ind"><div class="idx-n">Gold</div><div class="idx-p">4,938.40</div><div class="idx-c" style="color:#00ff88">+2.21%</div></div><div class="idx ind"><div class="idx-n">Silver</div><div class="idx-p">96.21</div><div class="idx-c" style="color:#00ff88">+4.34%</div></div><div class="idx ind"><div class="idx-n">Dollar Index</div><div class="idx-p">98.28</div><div class="idx-c" style="color:#ff6b6b">-0.48%</div></div><div class="idx ind"><div class="idx-n">10Y Treasury</div><div class="idx-p">4.25</div><div class="idx-c" style="color:#ff6b6b">-0.09%</div></div></div>
+    <div class="idx-wrap"><div class="idx"><div class="idx-n">S&P500</div><div class="idx-p">688.98</div><div class="idx-c" style="color:#00ff88">▲0.52%</div></div><div class="idx"><div class="idx-n">NASDAQ</div><div class="idx-p">620.76</div><div class="idx-c" style="color:#00ff88">▲0.73%</div></div><div class="idx"><div class="idx-n">DOW</div><div class="idx-p">493.69</div><div class="idx-c" style="color:#00ff88">▲0.59%</div></div><div class="idx"><div class="idx-n">Russell 2000</div><div class="idx-p">269.79</div><div class="idx-c" style="color:#00ff88">▲0.75%</div></div><div class="idx ind"><div class="idx-n">VIX</div><div class="idx-p">15.64</div><div class="idx-c" style="color:#ff6b6b">-7.46%</div></div><div class="idx ind"><div class="idx-n">WTI</div><div class="idx-p">59.57</div><div class="idx-c" style="color:#ff6b6b">-1.73%</div></div><div class="idx ind"><div class="idx-n">Gold</div><div class="idx-p">4,957.70</div><div class="idx-c" style="color:#00ff88">+2.61%</div></div><div class="idx ind"><div class="idx-n">Silver</div><div class="idx-p">96.88</div><div class="idx-c" style="color:#00ff88">+5.06%</div></div><div class="idx ind"><div class="idx-n">Dollar Index</div><div class="idx-p">98.27</div><div class="idx-c" style="color:#ff6b6b">-0.50%</div></div><div class="idx ind"><div class="idx-n">10Y Treasury</div><div class="idx-p">4.25</div><div class="idx-c" style="color:#ff6b6b">-0.09%</div></div></div>
 </div>
 
 <div class="section">
     <div class="section-title">🟢 상승 종목</div>
     <div class="item gain">
-            <div class="item-top"><span class="tk">DDOG</span><span class="nm">DDOG</span><span class="chg up">+6.31%</span></div>
-            <div class="item-theme"></div>
-            <div class="item-kr">→ </div>
+            <div class="item-top"><span class="tk">DDOG</span><span class="nm">Datadog</span><span class="chg up">+6.31%</span></div>
+            <div class="item-theme">클라우드모니터링</div>
+            <div class="item-kr">→ NAVER, 카카오</div>
         </div><div class="item gain">
             <div class="item-top"><span class="tk">META</span><span class="nm">Meta</span><span class="chg up">+5.66%</span></div>
             <div class="item-theme">SNS/메타버스</div>
-            <div class="item-kr">→ 카카오, NAVER</div>
+            <div class="item-kr">→ 카카오, NAVER, 하이브</div>
         </div><div class="item gain">
             <div class="item-top"><span class="tk">TSLA</span><span class="nm">Tesla</span><span class="chg up">+4.15%</span></div>
             <div class="item-theme">전기차</div>
-            <div class="item-kr">→ LG에너지솔루션, 삼성SDI</div>
+            <div class="item-kr">→ LG에너지솔루션, 삼성SDI, 포스코퓨처엠</div>
         </div><div class="item gain">
-            <div class="item-top"><span class="tk">CRM</span><span class="nm">CRM</span><span class="chg up">+2.94%</span></div>
-            <div class="item-theme"></div>
-            <div class="item-kr">→ </div>
+            <div class="item-top"><span class="tk">CRM</span><span class="nm">Salesforce</span><span class="chg up">+2.94%</span></div>
+            <div class="item-theme">CRM/클라우드</div>
+            <div class="item-kr">→ 더존비즈온, 삼성SDS</div>
         </div><div class="item gain">
-            <div class="item-top"><span class="tk">NOW</span><span class="nm">NOW</span><span class="chg up">+2.60%</span></div>
-            <div class="item-theme"></div>
-            <div class="item-kr">→ </div>
+            <div class="item-top"><span class="tk">NOW</span><span class="nm">ServiceNow</span><span class="chg up">+2.60%</span></div>
+            <div class="item-theme">엔터프라이즈SW</div>
+            <div class="item-kr">→ 삼성SDS, LG CNS</div>
         </div>
 </div>
 
 <div class="section">
     <div class="section-title">🔴 하락 종목</div>
     <div class="item lose">
-                <div class="item-top"><span class="tk">ABT</span><span class="nm">ABT</span><span class="chg down">-10.04%</span></div>
-                <div class="item-theme"></div>
-                <div class="item-kr">→ </div>
+                <div class="item-top"><span class="tk">ABT</span><span class="nm">Abbott</span><span class="chg down">-10.04%</span></div>
+                <div class="item-theme">의료기기</div>
+                <div class="item-kr">→ 삼성바이오, 씨젠</div>
             </div><div class="item lose">
-                <div class="item-top"><span class="tk">LRCX</span><span class="nm">LRCX</span><span class="chg down">-3.37%</span></div>
-                <div class="item-theme"></div>
-                <div class="item-kr">→ </div>
+                <div class="item-top"><span class="tk">LRCX</span><span class="nm">Lam Research</span><span class="chg down">-3.37%</span></div>
+                <div class="item-theme">반도체장비</div>
+                <div class="item-kr">→ 원익IPS, 피에스케이</div>
             </div><div class="item lose">
-                <div class="item-top"><span class="tk">NFLX</span><span class="nm">NFLX</span><span class="chg down">-2.13%</span></div>
-                <div class="item-theme"></div>
-                <div class="item-kr">→ </div>
+                <div class="item-top"><span class="tk">NFLX</span><span class="nm">Netflix</span><span class="chg down">-2.13%</span></div>
+                <div class="item-theme">스트리밍</div>
+                <div class="item-kr">→ CJ ENM, 스튜디오드래곤</div>
             </div><div class="item lose">
-                <div class="item-top"><span class="tk">UBER</span><span class="nm">UBER</span><span class="chg down">-2.02%</span></div>
-                <div class="item-theme"></div>
-                <div class="item-kr">→ </div>
+                <div class="item-top"><span class="tk">UBER</span><span class="nm">Uber</span><span class="chg down">-2.02%</span></div>
+                <div class="item-theme">모빌리티</div>
+                <div class="item-kr">→ 카카오모빌리티, 쏘카</div>
             </div><div class="item lose">
-                <div class="item-top"><span class="tk">AMAT</span><span class="nm">AMAT</span><span class="chg down">-1.98%</span></div>
-                <div class="item-theme"></div>
-                <div class="item-kr">→ </div>
+                <div class="item-top"><span class="tk">AMAT</span><span class="nm">Applied Materials</span><span class="chg down">-1.98%</span></div>
+                <div class="item-theme">반도체장비</div>
+                <div class="item-kr">→ 원익IPS, 주성엔지니어링</div>
             </div>
 </div>
 
@@ -163,43 +204,77 @@ body{font-family:-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);c
                 <div class="pick-header">
                     <div class="pick-rank">1</div>
                     <div class="pick-title">
-                        <span class="pick-name">LG에너지솔루션</span>
-                        <span class="pick-code">373220</span>
+                        <span class="pick-name">SK하이닉스</span>
+                        <span class="pick-code">000660</span>
                     </div>
+                    <div class="pick-score score-low">40점</div>
                 </div>
-                <div class="pick-reason">미국 경기소비재 섹터 연동 (+1.0%), Tesla 배터리 공급 확대, 북미 IRA 수혜</div>
-                <div class="pick-strategy">💡 목표가: -</div>
+                <div class="pick-price">
+                    <span class="price-now" style="color:var(--down)">750,000원 (-0.66%)</span>
+                    <span class="price-rsi"></span>
+                </div>
+                <div class="pick-signals"></div>
+                <div class="pick-reason">미국 기술 섹터 +0.7% | HBM 2027년까지 완판, 메모리 가격 사상최고</div>
+                <div class="pick-strategy">목표가: 88만~100만원 (키움/NH투자/신한/SK증권)</div>
             </div><div class="pick" style="--accent:#00D4FF">
                 <div class="pick-header">
                     <div class="pick-rank">2</div>
                     <div class="pick-title">
-                        <span class="pick-name">SK하이닉스</span>
-                        <span class="pick-code">000660</span>
+                        <span class="pick-name">삼성전자</span>
+                        <span class="pick-code">005930</span>
                     </div>
+                    <div class="pick-score score-low">38점</div>
                 </div>
-                <div class="pick-reason">미국 기술 섹터 연동 (+0.7%), HBM 2027년까지 완판, 메모리 가격 사상최고</div>
-                <div class="pick-strategy">💡 목표가: 88만~100만원</div>
+                <div class="pick-price">
+                    <span class="price-now" style="color:var(--up)">155,700원 (+2.23%)</span>
+                    <span class="price-rsi"></span>
+                </div>
+                <div class="pick-signals"></div>
+                <div class="pick-reason">미국 기술 섹터 +0.7% | 4Q 영업이익 20조원 돌파 기대</div>
+                <div class="pick-strategy">목표가: 15만~17만원 (KB/노무라/다올)</div>
             </div><div class="pick" style="--accent:#FF6B9D">
                 <div class="pick-header">
                     <div class="pick-rank">3</div>
                     <div class="pick-title">
+                        <span class="pick-name">NAVER</span>
+                        <span class="pick-code">035420</span>
+                    </div>
+                    <div class="pick-score score-low">38점</div>
+                </div>
+                <div class="pick-price">
+                    <span class="price-now" style="color:var(--up)">252,000원 (+2.65%)</span>
+                    <span class="price-rsi"></span>
+                </div>
+                <div class="pick-signals"></div>
+                <div class="pick-reason">미국 커뮤니케이션 섹터 +1.4% | AI 검색 고도화, 하반기 광고 매출 반등</div>
+                <div class="pick-strategy">목표가: - (복수 증권사)</div>
+            </div><div class="pick" style="--accent:#7C4DFF">
+                <div class="pick-header">
+                    <div class="pick-rank">4</div>
+                    <div class="pick-title">
                         <span class="pick-name">KB금융</span>
                         <span class="pick-code">105560</span>
                     </div>
+                    <div class="pick-score score-low">35점</div>
                 </div>
-                <div class="pick-reason">미국 금융 섹터 연동 (+0.7%), 총주주환원율 51.2% 업계 최고, 금리인하 수혜</div>
-                <div class="pick-strategy">💡 목표가: -</div>
+                <div class="pick-price">
+                    <span class="price-now" style="color:var(--down)">133,700원 (-0.74%)</span>
+                    <span class="price-rsi"></span>
+                </div>
+                <div class="pick-signals"></div>
+                <div class="pick-reason">미국 금융 섹터 +0.7% | 총주주환원율 51.2% 업계 최고, 금리인하 수혜</div>
+                <div class="pick-strategy">목표가: - (유안타)</div>
             </div>
 </div>
 
 <div class="section">
     <div class="section-title">⚠️ 리스크 요인</div>
-    <div class="risk-item">⚠️ 특이 리스크 없음</div>
+    <div class="risk-item">⚠️ 금 가격 상승 - 안전자산 선호 심리 강화</div>
 </div>
 
 <div class="outlook-box">
     <strong>🔮 향후 전망</strong>
-    <p style="margin-top:8px">시장 상황을 지켜보며 대응 필요.</p>
+    <p style="margin-top:8px">미국 증시 강세 지속 전망. 기술주 중심 상승세 유지 예상. 한국 시장도 동반 상승 기대.</p>
 </div>
 
 <div class="footer">
