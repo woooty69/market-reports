@@ -262,7 +262,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#0d1117;color:#e0e0e8;line
 <span style="display:flex;align-items:center;gap:6px;"><svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#5ba3f5" stroke-width="2" stroke-dasharray="5,5"/></svg><span style="color:rgba(255,255,255,0.55);">예상 중심값</span></span>
 </div>
 
-<svg viewBox="0 0 980 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:0 0 20px;">
+<svg viewBox="0 0 980 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:0 0 20px;">
   <defs>
     <linearGradient id="gFade" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#4ecdc4" stop-opacity="0.12"/>
@@ -277,115 +277,78 @@ body{font-family:'Noto Sans KR',sans-serif;background:#0d1117;color:#e0e0e8;line
   <!-- Axes -->
   <line x1="80" y1="40" x2="80" y2="400" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
   <line x1="80" y1="400" x2="945" y2="400" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-
-  <!-- Grid lines -->
   <line x1="80" y1="40" x2="945" y2="40" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
   <line x1="80" y1="130" x2="945" y2="130" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
   <line x1="80" y1="220" x2="945" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
   <line x1="80" y1="310" x2="945" y2="310" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
 
-  <!-- Y-axis labels -->
-  <text x="70" y="45" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end" font-family="Noto Sans KR" font-weight="500">100%</text>
-  <text x="70" y="135" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end" font-family="Noto Sans KR" font-weight="500">75%</text>
-  <text x="70" y="225" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end" font-family="Noto Sans KR" font-weight="500">50%</text>
-  <text x="70" y="315" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end" font-family="Noto Sans KR" font-weight="500">25%</text>
+  <!-- Y-axis: 100%=y40, 75%=y130, 64%=y170, 50%=y220, 25%=y310, 0%=y400 -->
+  <text x="70" y="45" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end">100%</text>
+  <text x="70" y="135" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end">75%</text>
+  <text x="70" y="225" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end">50%</text>
+  <text x="70" y="315" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="end">25%</text>
 
-  <!-- X-axis labels -->
-  <text x="80" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">0</text>
-  <text x="203" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">5</text>
-  <text x="326" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">10</text>
-  <text x="571" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">20</text>
-  <text x="694" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">25</text>
-  <text x="817" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">30</text>
-  <text x="940" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle" font-family="Noto Sans KR">35</text>
-  <text x="510" y="460" fill="rgba(255,255,255,0.4)" font-size="15" text-anchor="middle" font-family="Noto Sans KR">생존 기간 (개월)</text>
+  <!-- X-axis: per month=24.6px, m0=x80, m5=x203, m10=x326, m15=x449, m20=x571, m25=x694, m30=x817, m35=x940 -->
+  <text x="80" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">0</text>
+  <text x="203" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">5</text>
+  <text x="326" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">10</text>
+  <text x="571" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">20</text>
+  <text x="694" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">25</text>
+  <text x="817" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">30</text>
+  <text x="940" y="422" fill="rgba(255,255,255,0.5)" font-size="14" text-anchor="middle">35</text>
+  <text x="449" y="440" fill="#4ecdc4" font-size="13" text-anchor="middle" font-weight="700">3/15</text>
+  <text x="461" y="422" fill="rgba(78,205,196,0.5)" font-size="13" text-anchor="middle">3/30</text>
+  <text x="510" y="470" fill="rgba(255,255,255,0.4)" font-size="15" text-anchor="middle">생존 기간 (개월)</text>
 
-  <!-- 3/15 and 3/30 X-axis labels -->
-  <text x="449" y="435" fill="#4ecdc4" font-size="13" text-anchor="middle" font-family="Noto Sans KR" font-weight="700">3/15</text>
-  <text x="461" y="422" fill="rgba(78,205,196,0.5)" font-size="13" text-anchor="middle" font-family="Noto Sans KR">3/30</text>
-
-  <!-- 50% mOS reference line (full width, yellow dashed) -->
+  <!-- 50% mOS reference line -->
   <line x1="80" y1="220" x2="945" y2="220" stroke="#4ecdc4" stroke-width="1.2" stroke-dasharray="10,8" opacity="0.35"/>
-  <text x="955" y="218" fill="#4ecdc4" font-size="12" font-family="Noto Sans KR" opacity="0.5" text-anchor="start">← mOS 기준선</text>
+  <text x="955" y="218" fill="#4ecdc4" font-size="13" opacity="0.5">← mOS 기준선</text>
+  <text x="18" y="212" fill="#e2ce41" font-size="13" font-weight="700">27번째</text>
+  <text x="18" y="230" fill="#e2ce41" font-size="13" font-weight="700">사망=mOS</text>
 
-  <!-- 27번째 사망=mOS label (left side) -->
-  <text x="18" y="212" fill="#e2ce41" font-size="13" font-weight="700" font-family="Noto Sans KR">27번째</text>
-  <text x="18" y="230" fill="#e2ce41" font-size="13" font-weight="700" font-family="Noto Sans KR">사망=mOS</text>
+  <!-- Area under KM curve (gradient) - ends at y170 = 64% -->
+  <polygon fill="url(#redFade)" points="80,40 92,40 92,47 110,47 110,54 125,54 125,61 141,61 141,68 158,68 158,75 173,75 173,82 191,82 191,89 215,89 215,97 240,97 240,105 260,105 260,112 283,112 283,119 305,119 305,126 326,126 326,133 344,133 344,140 362,140 362,147 378,147 378,153 390,153 390,159 399,159 399,164 407,164 407,170 407,400 80,400"/>
 
-  <!-- Area under actual KM curve (dark shading) -->
-  <polygon fill="url(#redFade)" points="
-    80,40 92,40 92,56 105,56 105,72 117,72 117,83 129,83 129,97 141,97 141,110
-    154,110 154,121 166,121 166,130 178,130 178,140 203,140 203,152 228,152 228,164
-    252,164 252,173 277,173 277,182 301,182 301,190 326,190 326,197 338,197 338,203
-    351,203 351,207 363,207 363,210 375,210 375,212 387,212 387,213 399,213 399,400 80,400"/>
+  <!-- Death zone label -->
+  <rect x="105" y="48" rx="5" ry="5" width="195" height="52" fill="rgba(231,76,139,0.1)" stroke="rgba(231,76,139,0.25)" stroke-width="1"/>
+  <text x="202" y="69" fill="rgba(231,76,139,0.8)" font-size="14" text-anchor="middle" font-weight="700">사망발생 구간</text>
+  <text x="202" y="88" fill="rgba(231,76,139,0.55)" font-size="13" text-anchor="middle">0~13개월, 19명</text>
 
-  <!-- Death zone annotation box -->
-  <rect x="105" y="50" rx="5" ry="5" width="195" height="52" fill="rgba(231,76,139,0.1)" stroke="rgba(231,76,139,0.25)" stroke-width="1"/>
-  <text x="202" y="71" fill="rgba(231,76,139,0.8)" font-size="14" text-anchor="middle" font-family="Noto Sans KR" font-weight="700">사망발생 구간</text>
-  <text x="202" y="90" fill="rgba(231,76,139,0.55)" font-size="13" text-anchor="middle" font-family="Noto Sans KR">0~13개월, 19명</text>
+  <!-- KM step curve: 19 deaths, 100%(y40) → 64%(y170), step≈6.8px -->
+  <polyline fill="none" stroke="#e74c8b" stroke-width="2.5" stroke-linejoin="round" points="80,40 92,40 92,47 110,47 110,54 125,54 125,61 141,61 141,68 158,68 158,75 173,75 173,82 191,82 191,89 215,89 215,97 240,97 240,105 260,105 260,112 283,112 283,119 305,119 305,126 326,126 326,133 344,133 344,140 362,140 362,147 378,147 378,153 390,153 390,159 399,159 399,164 407,164 407,170"/>
 
-  <!-- Actual KM step curve (red/pink) — 19 deaths from 53 patients over 13 months -->
-  <polyline fill="none" stroke="#e74c8b" stroke-width="2.5" stroke-linejoin="round"
-    points="
-      80,40
-      92,40 92,56
-      105,56 105,72
-      117,72 117,83
-      129,83 129,97
-      141,97 141,110
-      154,110 154,121
-      166,121 166,130
-      178,130 178,140
-      203,140 203,152
-      228,152 228,164
-      252,164 252,173
-      277,173 277,182
-      301,182 301,190
-      326,190 326,197
-      338,197 338,203
-      351,203 351,207
-      363,207 363,210
-      375,210 375,212
-      387,212 387,213
-      399,213
-    "/>
+  <!-- 64% label -->
+  <text x="418" y="165" fill="rgba(255,255,255,0.45)" font-size="13">64%</text>
 
-  <!-- Teal shaded plateau zone (under plateau from 3/15 to 3/30, extending down) -->
-  <rect x="420" y="213" width="130" height="187" fill="url(#gFade)" rx="0"/>
+  <!-- Plateau zone shading -->
+  <rect x="430" y="170" width="100" height="230" fill="url(#gFade)"/>
 
-  <!-- Plateau line (green/teal dashed) — 13 months to 15.5 months, ~53% survival -->
-  <line x1="399" y1="213" x2="461" y2="213" stroke="#4ecdc4" stroke-width="3.5" stroke-dasharray="10,6"/>
+  <!-- Plateau line: month 13→15.5 at 64% -->
+  <line x1="407" y1="170" x2="461" y2="170" stroke="#4ecdc4" stroke-width="3.5" stroke-dasharray="10,6"/>
 
-  <!-- 3/15 vertical marker -->
-  <line x1="449" y1="213" x2="449" y2="410" stroke="rgba(78,205,196,0.35)" stroke-width="1.2" stroke-dasharray="5,5"/>
-  <!-- 3/30 vertical marker -->
-  <line x1="461" y1="213" x2="461" y2="410" stroke="rgba(78,205,196,0.2)" stroke-width="1" stroke-dasharray="4,6"/>
+  <!-- Vertical markers -->
+  <line x1="449" y1="170" x2="449" y2="410" stroke="rgba(78,205,196,0.35)" stroke-width="1.2" stroke-dasharray="5,5"/>
+  <line x1="461" y1="170" x2="461" y2="410" stroke="rgba(78,205,196,0.2)" stroke-width="1" stroke-dasharray="4,6"/>
 
-  <!-- Current point dot (3/15) -->
-  <circle cx="449" cy="213" r="8" fill="#4ecdc4" stroke="#0d1117" stroke-width="3"/>
+  <!-- Current point (3/15) -->
+  <circle cx="449" cy="170" r="8" fill="#4ecdc4" stroke="#0d1117" stroke-width="3"/>
 
-  <!-- "2.5개월 사망 0명!" badge -->
-  <rect x="475" y="196" rx="7" ry="7" width="175" height="36" fill="rgba(78,205,196,0.12)" stroke="rgba(78,205,196,0.45)" stroke-width="1.2"/>
-  <text x="562" y="220" fill="#4ecdc4" font-size="15" text-anchor="middle" font-family="Noto Sans KR" font-weight="700">⚠ 2.5개월 사망 0명!</text>
+  <!-- Badge -->
+  <rect x="475" y="152" rx="7" ry="7" width="175" height="36" fill="rgba(78,205,196,0.12)" stroke="rgba(78,205,196,0.45)" stroke-width="1.2"/>
+  <text x="562" y="176" fill="#4ecdc4" font-size="15" text-anchor="middle" font-weight="700">⚠ 2.5개월 사망 0명!</text>
 
-  <!-- PROJECTED PATHS from month 15.5 (x=461) -->
+  <!-- Projected: Conservative ~24mo (x≈591) crossing y220 -->
+  <polyline fill="none" stroke="#5ba3f5" stroke-width="1.8" stroke-dasharray="6,6" opacity="0.45" points="461,170 500,172 540,178 570,187 600,200 630,215 650,225 670,240"/>
+  <text x="655" y="256" fill="rgba(91,163,245,0.6)" font-size="13" font-weight="500">~24개월</text>
 
-  <!-- Conservative path (lower): drops below 50% at ~24 months, continues down -->
-  <polyline fill="none" stroke="#5ba3f5" stroke-width="1.8" stroke-dasharray="6,6" opacity="0.45"
-    points="461,213 510,214 560,216 610,219 650,224 680,232 700,242"/>
-  <text x="650" y="248" fill="rgba(91,163,245,0.6)" font-size="13" font-family="Noto Sans KR" font-weight="500">~24개월</text>
+  <!-- Projected: Central ★~27mo (x≈694) crossing y220 -->
+  <polyline fill="none" stroke="#5ba3f5" stroke-width="2.5" stroke-dasharray="8,5" points="461,170 510,171 560,173 610,177 660,184 700,196 730,210 750,220"/>
+  <text x="752" y="213" fill="#4ecdc4" font-size="22" font-weight="700">★</text>
+  <text x="762" y="238" fill="#4ecdc4" font-size="14" font-weight="700">~27개월</text>
 
-  <!-- Central/main path: gradually drops, hits 50% at ~27 months -->
-  <polyline fill="none" stroke="#5ba3f5" stroke-width="2.5" stroke-dasharray="8,5"
-    points="461,213 520,213 580,214 640,215 690,216 720,217 740,218 760,220"/>
-  <!-- Star marker at ~27 months -->
-  <text x="762" y="212" fill="#4ecdc4" font-size="22" font-weight="700">★</text>
-  <text x="770" y="234" fill="#4ecdc4" font-size="14" font-weight="700" font-family="Noto Sans KR">~27개월</text>
-
-  <!-- Optimistic path (upper): barely descends, stays above 50% past 32 months -->
-  <polyline fill="none" stroke="#4ecdc4" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.45"
-    points="461,213 530,213 620,213 720,214 800,215 870,216 935,218"/>
-  <text x="905" y="207" fill="rgba(78,205,196,0.6)" font-size="13" font-family="Noto Sans KR" font-weight="500">~32개월+</text>
+  <!-- Projected: Optimistic ~32mo+ stays above y220 -->
+  <polyline fill="none" stroke="#4ecdc4" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.45" points="461,170 530,170 620,172 720,176 800,183 870,194 920,208 940,215"/>
+  <text x="910" y="178" fill="rgba(78,205,196,0.6)" font-size="13" font-weight="500">~32개월+</text>
 </svg>
 
 <div class="hl-y">
