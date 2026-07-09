@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DRAM/NAND Price Report - 2026-07-10</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{max-width:860px;margin:0 auto;padding:16px;font-family:system-ui,'Malgun Gothic',sans-serif;color:#222;background:#fff}
+.hdr{font-size:20px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888;margin-bottom:16px}
+.sec{display:flex;align-items:center;gap:6px;margin:16px 0 8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sec-t{font-size:12px;font-weight:700;letter-spacing:.4px}
+.sec-d{font-size:11px;color:#888;margin-left:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.card{padding:10px 12px;border-radius:8px;background:#f8f9fa;border:1px solid #e5e7eb}
+.cl{font-size:11px;font-weight:600;color:#888}.cp{font-size:18px;font-weight:700;margin:2px 0}
+.cw{font-size:11px;font-weight:500}.up{color:#dc2626}.dn{color:#2563eb}
+.info{padding:16px;background:#f0f4ff;border-radius:8px;text-align:center;color:#555;margin:12px 0;font-size:13px}
+canvas{width:100%!important;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:16px}
+th{text-align:right;padding:6px 8px;font-weight:600;color:#666;border-bottom:2px solid #ddd;font-size:11px}
+th:first-child,th:nth-child(2){text-align:left}
+td{text-align:right;padding:5px 8px;border-bottom:1px solid #eee;font-variant-numeric:tabular-nums}
+td:first-child,td:nth-child(2){text-align:left;font-weight:500}
+tr:hover td{background:#f8f9fb}
+.footer{margin-top:20px;padding-top:12px;border-top:1px solid #eee;font-size:11px;color:#aaa;text-align:center}
+@media(max-width:600px){.cards{grid-template-columns:1fr 1fr}body{padding:10px}}
+</style></head><body>
+<div class="hdr">DRAM / NAND Spot Price Report</div>
+<div class="sub">DRAMeXchange | 2026-07-10 | Data days: 4</div>
+<div class='sec'><span class='dot' style='background:#3b82f6'></span><span class='sec-t' style='color:#3b82f6'>DRAM Spot (eTT)</span><span class='sec-d'>2026-07-10</span></div><div class='cards'><div class='card'><div class='cl'>DDR5 16Gb eTT</div><div class='cp' style='color:#3b82f6'>$23.5</div><div class='cw up'>&#9650; 0.86%</div></div><div class='card'><div class='cl'>DDR4 16Gb eTT</div><div class='cp' style='color:#b91c1c'>$11.45</div><div class='cw up'>&#9650; 0%</div></div><div class='card'><div class='cl'>DDR4 8Gb eTT</div><div class='cp' style='color:#ef4444'>$4.2</div><div class='cw up'>&#9650; 0.48%</div></div></div><div class='sec'><span class='dot' style='background:#8b5cf6'></span><span class='sec-t' style='color:#8b5cf6'>NAND Wafer Spot</span><span class='sec-d'>2026-07-10</span></div><div class='cards'><div class='card'><div class='cl'>NAND Wafer 512Gb TLC</div><div class='cp' style='color:#8b5cf6'>$19.862</div><div class='cw up'>&#9650; 1.03%</div></div><div class='card'><div class='cl'>NAND Wafer 256Gb TLC</div><div class='cp' style='color:#a855f7'>$10.18</div><div class='cw up'>&#9650; 0%</div></div><div class='card'><div class='cl'>NAND Wafer 128Gb TLC</div><div class='cp' style='color:#c084fc'>$6.487</div><div class='cw up'>&#9650; 0%</div></div></div>
+
+<canvas id="ch" height="300"></canvas>
+<table>
+<tr><th>Category</th><th>Product</th><th>Avg</th><th>Low</th><th>High</th><th>Change</th></tr>
+<tr><td>DDR5</td><td>DDR5 16Gb Branded</td><td>$47.767</td><td>$31.5</td><td>$62</td><td class='up'>1.49%</td></tr><tr><td>DDR5</td><td>DDR5 16Gb eTT</td><td>$23.5</td><td>$22.5</td><td>$25.5</td><td class='up'>0.86%</td></tr><tr><td>DDR4</td><td>DDR4 16Gb Branded</td><td>$77.125</td><td>$39.3</td><td>$95</td><td class='up'>0.26%</td></tr><tr><td>DDR4</td><td>DDR4 16Gb eTT</td><td>$11.45</td><td>$10</td><td>$11.9</td><td class='up'>0%</td></tr><tr><td>DDR4</td><td>DDR4 8Gb Branded</td><td>$37.4</td><td>$19.7</td><td>$63</td><td class='up'>0.16%</td></tr><tr><td>DDR4</td><td>DDR4 8Gb eTT</td><td>$4.2</td><td>$3.9</td><td>$4.4</td><td class='up'>0.48%</td></tr><tr><td>NAND</td><td>NAND SLC 2Gb</td><td>$3.935</td><td>$3.55</td><td>$4.5</td><td class='up'>0.38%</td></tr><tr><td>NAND</td><td>NAND SLC 1Gb</td><td>$3.6</td><td>$3.32</td><td>$3.85</td><td class='up'>0.06%</td></tr><tr><td>NAND</td><td>NAND MLC 64Gb</td><td>$29.682</td><td>$25</td><td>$42</td><td class='up'>2.11%</td></tr><tr><td>NAND</td><td>NAND MLC 32Gb</td><td>$14.733</td><td>$14</td><td>$16.2</td><td class='up'>1.61%</td></tr><tr><td>NAND_WAFER</td><td>NAND Wafer 512Gb TLC</td><td>$19.862</td><td>$15.5</td><td>$21</td><td class='up'>1.03%</td></tr><tr><td>NAND_WAFER</td><td>NAND Wafer 256Gb TLC</td><td>$10.18</td><td>$8</td><td>$11.3</td><td class='up'>0%</td></tr><tr><td>NAND_WAFER</td><td>NAND Wafer 128Gb TLC</td><td>$6.487</td><td>$4.5</td><td>$8.9</td><td class='up'>0%</td></tr>
+</table>
+<div class="footer">Source: DRAMeXchange (dramexchange.com) free homepage data<br>Auto-generated by DRAM Price Monitor</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+if(4 -ge 2) {
+new Chart(document.getElementById('ch'),{type:'line',
+data:{labels:['07-07','07-08','07-09','07-10'],datasets:[{label:'DDR4 8Gb eTT ($4.2)',data:[4.114,4.16,4.18,4.2],borderColor:'#ef4444',borderWidth:2,pointRadius:3,tension:0.3,fill:false,borderDash:[]},{label:'DDR4 16Gb eTT ($11.45)',data:[11.45,11.45,11.45,11.45],borderColor:'#b91c1c',borderWidth:2,pointRadius:3,tension:0.3,fill:false,borderDash:[]},{label:'DDR5 16Gb eTT ($23.5)',data:[23.3,23.3,23.3,23.5],borderColor:'#3b82f6',borderWidth:2,pointRadius:3,tension:0.3,fill:false,borderDash:[]},{label:'NAND Wafer 512Gb TLC ($19.862)',data:[19.862,19.862,19.862,19.862],borderColor:'#8b5cf6',borderWidth:2,pointRadius:3,tension:0.3,fill:false,borderDash:[6,3]},{label:'NAND Wafer 256Gb TLC ($10.18)',data:[10.18,10.18,10.18,10.18],borderColor:'#a855f7',borderWidth:2,pointRadius:3,tension:0.3,fill:false,borderDash:[6,3]},{label:'NAND Wafer 128Gb TLC ($6.487)',data:[6.487,6.487,6.487,6.487],borderColor:'#c084fc',borderWidth:2,pointRadius:3,tension:0.3,fill:false,borderDash:[6,3]}]},
+options:{responsive:true,maintainAspectRatio:false,
+interaction:{mode:'index',intersect:false},
+plugins:{legend:{position:'bottom',labels:{usePointStyle:true,pointStyle:'circle',padding:12,font:{size:11}}}},
+scales:{x:{grid:{display:false}},y:{title:{display:true,text:'USD'},ticks:{callback:v=>'$'+v.toFixed(1)},grid:{color:'rgba(0,0,0,0.06)'}}}}});
+}
+</script></body></html>
