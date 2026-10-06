@@ -536,5 +536,97 @@ RF머트리얼즈는 58,800원(+12.00%)으로 급등해 시가총액 1조577억�
 > 본 리포트는 공개 데이터·보도·증권사 리포트를 정리한 참고 자료이며 투자 권유가 아닙니다.
 
 </script>
-<script>document.getElementById('content').innerHTML=marked.parse(document.getElementById('md').textContent);document.querySelectorAll('#content a[href^="http"]').forEach(function(a){a.target='_blank';a.rel='noopener'});</script>
+<script>// scrollkeep.js (2026-10-07): PDF를 보고 돌아왔을 때 보던 위치로 복귀
+//  1) PDF 링크는 새 탭으로 연다(원래 페이지가 그대로 남음)
+//  2) 페이지별 스크롤 위치를 기억(localStorage) -> 뒤로가기로 돌아오면 자동 복귀
+//  3) 자동 복귀가 안 되면 화면 왼쪽 아래에 "↩ 보던 위치로" 버튼
+// 리포트 허브(Quartz SPA)와 market-reports 단일 페이지 양쪽에서 같은 코드를 쓴다(순수 JS).
+;(function () {
+  var W = window
+  if (W.__hwScrollKeep) return
+  W.__hwScrollKeep = true
+  var KEY = "hw_scroll_v1"
+  var ready = false
+  var spaBack = false
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}") } catch (e) { return {} }
+  }
+  function save(y) {
+    try {
+      var d = load()
+      d[location.pathname] = { y: Math.round(y == null ? window.scrollY : y), t: Date.now() }
+      var ks = Object.keys(d)
+      if (ks.length > 60) { ks.sort(function (a, b) { return d[a].t - d[b].t }); delete d[ks[0]] }
+      localStorage.setItem(KEY, JSON.stringify(d))
+    } catch (e) {}
+  }
+  function isPdf(a) {
+    var h = a.getAttribute("href") || ""
+    return /\.pdf($|[?#])/i.test(h) || /hw-pdf-arch/i.test(h)
+  }
+  function markLinks() {
+    var as = document.querySelectorAll("a[href]")
+    for (var i = 0; i < as.length; i++) {
+      if (isPdf(as[i])) { as[i].setAttribute("target", "_blank"); as[i].setAttribute("rel", "noopener") }
+    }
+  }
+  var btnEl = null
+  function hideBtn() { if (btnEl) { btnEl.remove(); btnEl = null } }
+  function showBtn(y) {
+    hideBtn()
+    var b = document.createElement("button")
+    b.type = "button"
+    b.textContent = "↩ 보던 위치로"
+    b.setAttribute("style", "position:fixed;left:12px;bottom:14px;z-index:99999;background:#1f6feb;color:#fff;" +
+      "border:0;border-radius:18px;padding:8px 14px;font-size:14px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer")
+    b.onclick = function () { window.scrollTo(0, y); hideBtn() }
+    document.body.appendChild(b)
+    btnEl = b
+    setTimeout(hideBtn, 20000)
+  }
+  function restore(isBack) {
+    ready = false
+    var r = load()[location.pathname]
+    if (!r || Date.now() - r.t > 12 * 3600 * 1000 || r.y < 300) { ready = true; return }
+    var tries = 0
+    ;(function go() {
+      if (Math.abs(window.scrollY - r.y) < 150) { ready = true; return }
+      var h = document.documentElement.scrollHeight
+      if (isBack && h >= r.y + window.innerHeight * 0.5) { window.scrollTo(0, r.y); ready = true; return }
+      if (isBack && ++tries < 25) { setTimeout(go, 150); return }
+      ready = true
+      if (window.scrollY < r.y - 400) showBtn(r.y)   // 새로 연 경우·자동 복귀 실패 시 버튼으로 안내
+    })()
+  }
+  function navType() {
+    try { var e = performance.getEntriesByType("navigation")[0]; return e ? e.type : "" } catch (e) { return "" }
+  }
+  // 링크를 누르기 직전·페이지를 떠날 때·스크롤이 멈출 때 위치 저장
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null
+    if (a) save()
+  }, true)
+  var tm = null
+  window.addEventListener("scroll", function () {
+    if (!ready) return
+    clearTimeout(tm)
+    tm = setTimeout(function () { save(); if (btnEl && window.scrollY > 300) hideBtn() }, 400)
+  }, { passive: true })
+  window.addEventListener("pagehide", function () { if (ready) save() })
+  window.addEventListener("popstate", function () { spaBack = true })
+  // bfcache 로 돌아온 경우엔 브라우저가 위치를 그대로 유지하므로 아무것도 안 한다
+  var first = true
+  function onPage() {
+    markLinks()
+    var back = first ? navType() === "back_forward" : spaBack
+    first = false
+    spaBack = false
+    restore(back)
+  }
+  // Quartz(리포트 허브): 페이지 전환마다 'nav' 이벤트 / 단일 페이지(market-reports): 렌더 후 hwContentReady 이벤트
+  document.addEventListener("nav", onPage)
+  document.addEventListener("hwContentReady", onPage)
+})()
+</script>
+<script>document.getElementById('content').innerHTML=marked.parse(document.getElementById('md').textContent);document.querySelectorAll('#content a[href^="http"]').forEach(function(a){a.target='_blank';a.rel='noopener'});document.dispatchEvent(new Event('hwContentReady'));</script>
 </body></html>
